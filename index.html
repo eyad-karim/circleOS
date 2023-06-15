@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circle OS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <main>
+        <div class="desktop">
+            <div class="window" id="browser">
+                <header class="header" id="browser-header">
+                    <div class="window-tools">
+                        Browser
+                    </div>
+                    <div class="tools">
+                        <span class="close" id="browser-close">
+                            <i class="fa-solid fa-xmark"></i>
+                        </span>
+                    </div>
+                </header>
+                hi
+            </div>
+            <div class="window" id="files">
+                <header class="header" id="files-header">
+                    <div class="window-tools">
+                        Files
+                    </div>
+                    <div class="tools">
+                        <span class="close" id="files-close">
+                            <i class="fa-solid fa-xmark"></i>
+                        </span>
+                    </div>
+                </header>
+                hi
+            </div>
+            <div class="window" id="sett">
+                <header class="header" id="sett-header">
+                    <div class="window-tools">
+                        Settings
+                    </div>
+                    <div class="tools">
+                        <span class="close" id="sett-close">
+                            <i class="fa-solid fa-xmark"></i>
+                        </span>
+                    </div>
+                </header>
+                hi
+            </div>
+        </div>
+        <div class="start">
+            <input type="text" placeholder="search" style="width: 100%;">
+            <h3 style="margin-top: 10px;">Apps</h3>
+            <ul>
+                <li class="window-btn" id="browser-open">
+                    <img alt="browser" src="media/browser.png" ><span>browser</span>
+                </li>
+                <li class="window-btn" id="sett-open">
+                    <img alt="sett" src="media/sett.png" ><span>settings</span>
+                </li>
+                <li class="window-btn" id="files-open">
+                    <img alt="file" src="media/files.png" ><span>files</span>
+                </li>
+            </ul>
+        </div>
+        <div class="taskbar">
+            <div class="start-btn" title="start">
+                <img alt="cirlce" src="media/circle.png" >
+            </div>
+            <ul>
+                <li title="files" class="window-btn" id="files-open"><img alt="files" src="media/files.png" ></li>
+                <li title="browser" class="window-btn" id="browser-open"><img alt="browser" src="media/browser.png" ></li>
+            </ul>
+        </div>
+    </main>
+    <script src="main.js" defer></script>
+</body>
+</html>

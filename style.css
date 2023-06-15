@@ -1,0 +1,254 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+input {
+    background-color: white;
+    border: 1px solid #cecece;
+    height: 40px;
+    border-radius: 30px;
+    padding: 10px;
+    margin-bottom: 2px;
+    outline: none;
+    transition: all 0.3s;
+}
+
+main {
+    height: 100vh;
+    background-image: url("media/bg3.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main > .desktop {
+    width: 100%;
+    height: 95vh;
+}
+
+main > .taskbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin: 10px;
+    background-color: white;
+    border-radius: 30px;
+    height: 60px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    border: 1px solid #cecece;
+    z-index: 200;
+}
+
+main > .taskbar > .start-btn{
+    height: 60px;
+    width: 60px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+main > .taskbar > .start-btn > img {
+    width: 40px;
+    height: 40px;
+    transition-duration: 0.3s;
+    transform: rotate(0deg);
+}
+main > .taskbar > .start-btn:hover > img {
+    width: 50px;
+    height: 50px;
+}
+main > .taskbar > .start-btn:active > img {
+    width: 30px;
+    height: 30px;
+    transform: rotate(360deg);
+}
+
+main > .taskbar > ul {
+    border-left: 1px solid #cecece;
+    display: flex;
+    flex-direction: row;
+}
+main > .taskbar > ul > li {
+    height: 60px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+
+main > .taskbar > ul > li > img {
+    width: 35px;
+    height: 35px;
+    transition-duration: 0.5s;
+}
+main > .taskbar > ul > li:hover > img {
+    width: 45px;
+    height: 45px;
+}
+main > .taskbar > ul > li:active > img {
+    width: 30px;
+    height: 30px;
+}
+
+[title]{
+    position: relative;
+}
+
+[title]:hover::after {
+    content: attr(title);
+    color: black;
+    position: absolute;
+    transform: translateY(calc(-100% - 1.5em));
+    border: 1px solid #cecece;
+    padding: 5px 10px;
+    border-radius: 2em;
+    font-size: 0.9em;
+    background-color: rgb(255, 255, 255);
+    transition-duration: 0.5s;
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(calc(-100% - 3em));
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+main > .start {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    margin: 10px;
+    margin-bottom: 80px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 30px;
+    min-height: 750px;
+    min-width: 650px;
+    transition-duration: 0.5s;
+    transition-timing-function: cubic-bezier(.4, .01, .15, 1.1);
+    border: 1px solid #cecece;
+    z-index: 100;
+}
+.open-start {
+    bottom: 0 !important;
+    transition-duration: 0.5s;
+}
+
+main > .start > ul {
+    list-style-type: none;
+    padding: 20px 10px;
+    display: flex;
+    gap: 5px;
+}
+
+main > .start > ul > li {
+    padding: 10px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition-duration: 0.5s;
+}
+
+main > .start > ul > li:hover {
+    background-color: #e4e4e4;
+}
+
+main > .start > ul > li > span {
+    font-size: 0.9em;
+}
+
+main > .start > ul > li > img {
+    height: 50px;
+    width: 50px;
+}
+
+.desktop {
+    padding: 10px;
+}
+
+.window {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid #cecece;
+    padding: 40px 10px 10px 10px;
+    border-radius: 15px;
+    min-width: 100px;
+    min-height: 100px;
+    width: 800px;
+    height: 500px;
+    overflow: hidden;
+    z-index: 50;
+    resize: both;
+}
+
+.window.open-window{
+    display: block;
+}
+
+.window.top{
+    z-index: 60;
+}
+
+.window > .header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-left: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    background-color: #e4e4e4;
+    z-index: 20;
+    user-select: none;
+}
+
+.window > .header > .tools {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.window > .header > .tools > span {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+
+.window > .header > .tools > span.close:hover {
+    background-color: red;
+    color: white;
+}
+.window > .header > .tools > span.minimize:hover {
+    background-color: #cecece;
+    color: black;
+}
