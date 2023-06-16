@@ -22,7 +22,7 @@ input {
 
 main {
     height: 100vh;
-    background-image: url("media/bg3.png");
+    background-image: url("media/bg2.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -30,7 +30,8 @@ main {
 
 main > .desktop {
     width: 100%;
-    height: 95vh;
+    height: calc(100vh - 60px);
+    
 }
 
 main > .taskbar {
@@ -196,8 +197,8 @@ main > .start > ul > li > img {
     border: 1px solid #cecece;
     padding: 40px 10px 10px 10px;
     border-radius: 15px;
-    min-width: 100px;
-    min-height: 100px;
+    min-width: 300px;
+    min-height: 300px;
     width: 800px;
     height: 500px;
     overflow: hidden;
@@ -207,6 +208,11 @@ main > .start > ul > li > img {
 
 .window.open-window{
     display: block;
+}
+
+.window.full-screen-window {
+    width: 100%;
+    height: 100%;
 }
 
 .window.top{
@@ -248,7 +254,7 @@ main > .start > ul > li > img {
     background-color: red;
     color: white;
 }
-.window > .header > .tools > span.minimize:hover {
+.window > .header > .tools > span.full-screen:hover {
     background-color: #cecece;
     color: black;
 }

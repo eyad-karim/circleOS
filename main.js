@@ -4,6 +4,7 @@ let windows = document.querySelectorAll(".window"); // all windows
 let windows_open_btns = document.querySelectorAll(".window-btn"); // all the buttons in the taskbar that open the windows
 let windows_headers = document.querySelectorAll(".window > .header"); // all window headers that can drag the window
 let windows_close_btns = document.querySelectorAll(".window > .header > .tools > .close"); // all the close button in windows in headers
+let windows_full_screen_btns = document.querySelectorAll(".window > .header > .tools > .full-screen"); // all the full screen button in windows in headers
 
 let start = document.querySelector(".start"); // the start window that has all apps
 let start_btn = document.querySelector(".start-btn"); // the button that opens the start window
@@ -28,6 +29,11 @@ function closeWindow(windowID) {
   document.getElementById(windowID).classList.remove("open-window") // add the class to close the window useing window id
 }
 
+/** fulls screen window */
+function fullscreenWindow(windowID) {
+  document.getElementById(windowID).classList.toggle("full-screen-window") // add the class to full screen the window useing window id
+}
+
 /** make one window the top from others */
 function topWindow(windowID) {
   windows.forEach(window => {
@@ -41,6 +47,15 @@ windows_close_btns.forEach(btn => { // for all close window buttons
   btn.addEventListener("click",() => {
     let btnID = btn.id; // get the close button id
     closeWindow(btnID.slice(0,-6))// get the window id from the btn and close it
+    // btnID.slice(0,-6) >> "browser-close" => "browser"
+  })
+});
+
+/** handel all full screen btns */
+windows_full_screen_btns.forEach(btn => { // for all close window buttons
+  btn.addEventListener("click",() => {
+    let btnID = btn.id; // get the close button id
+    fullscreenWindow(btnID.split("-")[0])// get the window id from the btn and close it
     // btnID.slice(0,-6) >> "browser-close" => "browser"
   })
 });
