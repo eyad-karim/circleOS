@@ -1,16 +1,16 @@
 let main = document.querySelector("main"); // main el
 let desktop = document.querySelector(".desktop"); // desktop
 let windows = document.querySelectorAll(".window"); // all windows
-let windows_open_btns = document.querySelectorAll(".window-btn"); // all the buttons in the taskbar that open the windows
-let windows_headers = document.querySelectorAll(".window > .header"); // all window headers that can drag the window
-let windows_close_btns = document.querySelectorAll(".window > .header > .tools > .close"); // all the close button in windows in headers
-let windows_full_screen_btns = document.querySelectorAll(".window > .header > .tools > .full-screen"); // all the full screen button in windows in headers
+let windowsOpenBtns = document.querySelectorAll(".window-open-btn"); // all the buttons in the taskbar that open the windows
+let windowsHeaders = document.querySelectorAll(".window > .header"); // all window headers that can drag the window
+let windowsCloseBtns = document.querySelectorAll(".window > .header > .tools > .close"); // all the close button in windows in headers
+let windowsFullScreenBtns = document.querySelectorAll(".window > .header > .tools > .full-screen"); // all the full screen button in windows in headers
 
 let start = document.querySelector(".start"); // the start window that has all apps
-let start_btn = document.querySelector(".start-btn"); // the button that opens the start window
+let startOpenBtn = document.querySelector(".start-open-btn"); // the button that opens the start window
 
 /** open and close sections */
-start_btn.addEventListener("click",() => {
+startOpenBtn.addEventListener("click",() => {
     start.classList.toggle("open-start") // add the class to the start window to open
 })
 
@@ -24,6 +24,7 @@ desktop.addEventListener("click",() => {
 function openWindow(windowID) {
   document.getElementById(windowID).classList.add("open-window") // add the class to open the window useing window id
 }
+
 /** close window */
 function closeWindow(windowID) {
   document.getElementById(windowID).classList.remove("open-window") // add the class to close the window useing window id
@@ -43,7 +44,7 @@ function topWindow(windowID) {
 }
 
 /** handel all close btns */
-windows_close_btns.forEach(btn => { // for all close window buttons
+windowsCloseBtns.forEach(btn => { // for all close window buttons
   btn.addEventListener("click",() => {
     let btnID = btn.id; // get the close button id
     closeWindow(btnID.slice(0,-6))// get the window id from the btn and close it
@@ -52,7 +53,7 @@ windows_close_btns.forEach(btn => { // for all close window buttons
 });
 
 /** handel all full screen btns */
-windows_full_screen_btns.forEach(btn => { // for all close window buttons
+windowsFullScreenBtns.forEach(btn => { // for all close window buttons
   btn.addEventListener("click",() => {
     let btnID = btn.id; // get the close button id
     fullscreenWindow(btnID.split("-")[0])// get the window id from the btn and close it
@@ -61,9 +62,9 @@ windows_full_screen_btns.forEach(btn => { // for all close window buttons
 });
 
 /** handel all open btns */
-windows_open_btns.forEach(window_open_btn => { // for all open window buttons
-  let btnID = window_open_btn.id; // get the open button id
-  window_open_btn.addEventListener("click",() => {
+windowsOpenBtns.forEach(windowOpenBtn => { // for all open window buttons
+  let btnID = windowOpenBtn.id; // get the open button id
+  windowOpenBtn.addEventListener("click",() => {
     openWindow(btnID.slice(0,-5)) // get the window id from the btn and open it
     // btnID.slice(0,-5) >> "browser-open" => "browser"
     topWindow(btnID.slice(0,-5)) // get the window id from the btn and make it the top

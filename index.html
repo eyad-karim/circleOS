@@ -15,72 +15,67 @@
         <div class="desktop">
             <div class="window" id="browser">
                 <header class="header" id="browser-header">
-                    <div class="window-tools">
-                        Browser
-                    </div>
                     <div class="tools">
-                        <span class="full-screen" id="browser-full-screen">
-                            <i class="fa-solid fa-expand"></i>
-                        </span>
                         <span class="close" id="browser-close">
                             <i class="fa-solid fa-xmark"></i>
                         </span>
                     </div>
                 </header>
-                hi
+                <div>
+                    hi
+                </div>
             </div>
             <div class="window" id="files">
                 <header class="header" id="files-header">
-                    <div class="window-tools">
-                        Files
-                    </div>
                     <div class="tools">
                         <span class="close" id="files-close">
                             <i class="fa-solid fa-xmark"></i>
                         </span>
                     </div>
                 </header>
-                hi
-            </div>
-            <div class="window" id="sett">
-                <header class="header" id="sett-header">
-                    <div class="window-tools">
-                        Settings
-                    </div>
-                    <div class="tools">
-                        <span class="close" id="sett-close">
-                            <i class="fa-solid fa-xmark"></i>
-                        </span>
-                    </div>
-                </header>
-                hi
+                <div>
+                    hi
+                </div>
             </div>
         </div>
         <div class="start">
-            <input type="text" placeholder="search" style="width: 100%;">
-            <h3 style="margin-top: 10px;">Apps</h3>
-            <ul>
-                <li class="window-btn" id="browser-open">
-                    <img alt="browser" src="media/browser.png" ><span>browser</span>
-                </li>
-                <li class="window-btn" id="sett-open">
-                    <img alt="sett" src="media/sett.png" ><span>settings</span>
-                </li>
-                <li class="window-btn" id="files-open">
-                    <img alt="file" src="media/files.png" ><span>files</span>
-                </li>
-            </ul>
+            <div class="right">
+                <ul>
+                    <li>A</li>
+                    <li>files</li>
+                    <li>browser</li>
+                </ul>
+            </div>
+            <div class="left">
+                <input type="text" placeholder="search" style="width: 100%;">
+                <h3>A</h3>
+                <ul>
+                    <li>
+                        <img alt="file" src="media/files.svg" ><span>files</span>
+                    </li>
+                </ul>
+            </div>
         </div>
         <div class="taskbar">
             <div class="start-btn" title="start">
-                <img alt="cirlce" src="media/circle.png" >
+                <div class="start-open-btn">
+                    <img alt="cirlce" src="media/windows-logo.svg" >
+                </div>
             </div>
-            <ul>
-                <li title="files" class="window-btn" id="files-open"><img alt="files" src="media/files.png" ></li>
-                <li title="browser" class="window-btn" id="browser-open"><img alt="browser" src="media/browser.png" ></li>
-            </ul>
+            <div class="apps">
+                <ul>
+                    <li title="files" class="window-open-btn" id="files-open"><img alt="files" src="media/files.svg" ></li>
+                    <li title="browser" class="window-open-btn" id="browser-open"><img alt="browser" src="media/browser.png" ></li>
+                </ul>
+            </div>
+            <div class="time">
+                <div>
+                    <span>12:04 PM</span>
+                    <span>6/17/2023</span>
+                </div>
+            </div>
         </div>
     </main>
-    <script src="main.js" defer></script>
+    <script src="main.js"></script>
 </body>
 </html>

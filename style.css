@@ -1,108 +1,196 @@
-* {
-    padding: 0;
+*{
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
+}
+
+input {
+    background-color: #eee;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    outline: none;
 }
 
 body {
     font-family: 'Poppins', sans-serif;
     overflow: hidden;
 }
-
-input {
-    background-color: white;
-    border: 1px solid #cecece;
-    height: 40px;
-    border-radius: 30px;
-    padding: 10px;
-    margin-bottom: 2px;
-    outline: none;
-    transition: all 0.3s;
-}
-
 main {
     height: 100vh;
-    background-image: url("media/bg2.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
-
-main > .desktop {
-    width: 100%;
-    height: calc(100vh - 60px);
-    
-}
-
-main > .taskbar {
-    position: fixed;
+.taskbar {
+    position: absolute;
     bottom: 0;
     left: 0;
-    margin: 10px;
-    background-color: white;
-    border-radius: 30px;
-    height: 60px;
+    right: 0;
+    height: 50px;
     display: flex;
-    justify-content: start;
     align-items: center;
-    border: 1px solid #cecece;
+    flex-direction: row;
+    justify-content: center;
+    margin: 5px;
+    gap: 10px;
+    z-index: 300;
+}
+.taskbar .start-btn {
+    background-color: #dfedee;
+    border: 1px solid #ddd;
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.taskbar .start-btn div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    border-radius: 10px;
+    transition-duration: 0.3s;
+}
+.taskbar .start-btn div:hover{
+    background-color: #fff;
+}
+.taskbar .start-btn div:active img{
+    transform: scale(75%);
+}
+.taskbar .start-btn div img{
+    height: 25px;
+    width: 25px;
+    transition-duration: 0.3s;
+}
+.taskbar .apps {
+    background-color: #dfedee;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    min-width: 300px;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+.taskbar .apps ul{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    list-style: none;
+}
+.taskbar .apps ul li{
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin: 0 2px;
+    transition-duration: 0.3s;
+}
+.taskbar .apps ul li:hover{
+    background-color: #fff;
+}
+.taskbar .apps ul li:active img{
+    transform: scale(75%);
+}
+.taskbar .apps ul li img{
+    height: 25px;
+    width: 25px;
+    transition-duration: 0.3s;
+}
+.taskbar .time{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    background-color: #dfedee;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+.taskbar .time div{
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    padding: 5px;
+}
+.start{
+    position: absolute;
+    bottom: -200%;
+    left: 50%;
+    transform: translate(-50%,0);
+    width: 800px;
+    height: 700px;
+    background-color: #dfedee;
+    margin-bottom: 60px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    gap: 5px;
+    transition-duration: 0.5s;
+    transition-timing-function: cubic-bezier(.4, .01, .15, 1.1);
     z-index: 200;
 }
 
-main > .taskbar > .start-btn{
-    height: 60px;
-    width: 60px;
-    border-radius: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-}
-
-main > .taskbar > .start-btn > img {
-    width: 40px;
-    height: 40px;
-    transition-duration: 0.3s;
-    transform: rotate(0deg);
-}
-main > .taskbar > .start-btn:hover > img {
-    width: 50px;
-    height: 50px;
-}
-main > .taskbar > .start-btn:active > img {
-    width: 30px;
-    height: 30px;
-    transform: rotate(360deg);
-}
-
-main > .taskbar > ul {
-    border-left: 1px solid #cecece;
-    display: flex;
-    flex-direction: row;
-}
-main > .taskbar > ul > li {
-    height: 60px;
-    width: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 30px;
-    transition-duration: 0.3s;
-    cursor: pointer;
-}
-
-main > .taskbar > ul > li > img {
-    width: 35px;
-    height: 35px;
+.open-start {
+    bottom: 0 !important;
     transition-duration: 0.5s;
 }
-main > .taskbar > ul > li:hover > img {
-    width: 45px;
-    height: 45px;
+
+.start .right{
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 5px;
+    width: 200px;
 }
-main > .taskbar > ul > li:active > img {
-    width: 30px;
-    height: 30px;
+
+.start .right ul{
+    list-style: none;
+}
+.start .right ul li{
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    margin-bottom: 5px;
+    transition-duration: 0.3s;
+}
+.start .right ul li:hover{
+    background-color: #eee;
+    border: 1px solid #ddd;
+}
+.start .left{
+    background-color: #fff;
+    width: 600px;
+    padding: 5px;
+    border-radius: 10px;
+}
+.start .left ul{
+    list-style: none;
+    margin: 5px;
+}
+.start .left ul li {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 5px;
+    border: 1px solid transparent;
+    transition-duration: 0.3s;
+}
+.start .left ul li:hover{
+    background-color: #eee;
+    border: 1px solid #ddd;
+}
+.start .left ul li img{
+    width: 50px;
+    height: 50px;
 }
 
 [title]{
@@ -116,7 +204,7 @@ main > .taskbar > ul > li:active > img {
     transform: translateY(calc(-100% - 1.5em));
     border: 1px solid #cecece;
     padding: 5px 10px;
-    border-radius: 2em;
+    border-radius: 10px;
     font-size: 0.9em;
     background-color: rgb(255, 255, 255);
     transition-duration: 0.5s;
@@ -133,70 +221,18 @@ main > .taskbar > ul > li:active > img {
     }
 }
 
-main > .start {
-    position: absolute;
-    bottom: -100%;
-    left: 0;
-    margin: 10px;
-    margin-bottom: 80px;
-    padding: 30px;
-    background-color: white;
-    border-radius: 30px;
-    min-height: 750px;
-    min-width: 650px;
-    transition-duration: 0.5s;
-    transition-timing-function: cubic-bezier(.4, .01, .15, 1.1);
-    border: 1px solid #cecece;
-    z-index: 100;
-}
-.open-start {
-    bottom: 0 !important;
-    transition-duration: 0.5s;
-}
-
-main > .start > ul {
-    list-style-type: none;
-    padding: 20px 10px;
-    display: flex;
-    gap: 5px;
-}
-
-main > .start > ul > li {
-    padding: 10px 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition-duration: 0.5s;
-}
-
-main > .start > ul > li:hover {
-    background-color: #e4e4e4;
-}
-
-main > .start > ul > li > span {
-    font-size: 0.9em;
-}
-
-main > .start > ul > li > img {
-    height: 50px;
-    width: 50px;
-}
-
 .desktop {
     padding: 10px;
+    height: calc(100% - 60px);
 }
 
 .window {
     display: none;
     position: absolute;
     background-color: white;
-    border: 1px solid #cecece;
+    border: 1px solid #dfedee;
     padding: 40px 10px 10px 10px;
-    border-radius: 15px;
+    border-radius: 10px;
     min-width: 300px;
     min-height: 300px;
     width: 800px;
@@ -223,13 +259,12 @@ main > .start > ul > li > img {
     position: absolute;
     top: 0;
     left: 0;
-    padding-left: 10px;
+    right: 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: end;
     align-items: center;
-    width: 100%;
     height: 40px;
-    background-color: #e4e4e4;
+    background-color: transparent;
     z-index: 20;
     user-select: none;
 }
@@ -238,6 +273,9 @@ main > .start > ul > li > img {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #dfedee;
+    border-radius: 0 0 0 10px;
+    overflow: hidden;
 }
 
 .window > .header > .tools > span {
@@ -255,6 +293,6 @@ main > .start > ul > li > img {
     color: white;
 }
 .window > .header > .tools > span.full-screen:hover {
-    background-color: #cecece;
+    background-color: #c6d2d3;
     color: black;
 }
