@@ -32,10 +32,18 @@ main {
     display: flex;
     align-items: center;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     margin: 5px;
-    gap: 10px;
     z-index: 300;
+    gap: 10px;
+}
+.taskbar .right,.taskbar .center,.taskbar .left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex: 1;
+    gap: 10px;
 }
 .taskbar .start-btn {
     border: 1px solid #ddd;
@@ -159,44 +167,12 @@ main {
     bottom: 0 !important;
     transition-duration: 0.5s;
 }
-
-.start .recommended{
-    padding: 30px;
-    margin: 10px;
-    height: 16%;
-    border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.50);
-    display: flex;
-    align-items: center;
-}
-
-.start .recommended ul{
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    flex: 1;
-    gap: 10px;
-}
-.start .recommended ul li{
-    padding: 10px;
-    border-radius: 10px;
-    border: 1px solid transparent;
-    transition-duration: 0.3s;
-    display: inline;
-    width: calc(50% - 5px);
-}
-.start .recommended ul li:hover{
-    background-color: #fff;
-    border: 1px solid #ddd;
-}
 .start .pinned{
     padding: 30px;
     margin: 10px;
     height: 84%;
     border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.50);
+    user-select: none;
 }
 .start .pinned ul{
     list-style: none;

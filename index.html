@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Circle OS</title>
+    <title>windows 12</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="media/windows-logo.svg">
 </head>
 <body>
     <main>
@@ -50,39 +51,40 @@
                     </li>
                 </ul>
             </div>
-            <div class="recommended">
-                <ul>
-                    <li>files</li>
-                    <li>browser</li>
-                </ul>
-            </div>
         </div>
         <div class="taskbar">
-            <div class="start-btn" title="start">
-                <div class="start-open-btn">
-                    <img alt="cirlce" src="media/windows-logo.svg" >
+            <div class="left">
+                
+            </div>
+            <div class="center">
+                <div class="start-btn" title="start">
+                    <div class="start-open-btn">
+                        <img alt="cirlce" src="media/windows-logo.svg" >
+                    </div>
+                </div>
+                <div class="apps container">
+                    <ul>
+                        <li title="files" class="window-open-btn" id="files-open"><img alt="files" src="media/files.svg" ></li>
+                        <li title="browser" class="window-open-btn" id="browser-open"><img alt="browser" src="media/browser.png" ></li>
+                    </ul>
                 </div>
             </div>
-            <div class="apps container">
-                <ul>
-                    <li title="files" class="window-open-btn" id="files-open"><img alt="files" src="media/files.svg" ></li>
-                    <li title="browser" class="window-open-btn" id="browser-open"><img alt="browser" src="media/browser.png" ></li>
-                </ul>
-            </div>
-            <div class="tools container">
-                <div>
-                    <span>
-                        <i class="fa-solid fa-wifi"></i>
-                    </span>
-                    <span>
-                        <i class="fa-solid fa-volume-high"></i>
-                    </span>
+            <div class="right">
+                <div class="tools container">
+                    <div>
+                        <span>
+                            <i class="fa-solid fa-wifi"></i>
+                        </span>
+                        <span>
+                            <i class="fa-solid fa-volume-high"></i>
+                        </span>
+                    </div>
                 </div>
-            </div>
-            <div class="time container">
-                <div>
-                    <span id="time">12:04 PM</span>
-                    <span id="date">6/17/2023</span>
+                <div class="time container">
+                    <div>
+                        <span id="time">12:04 PM</span>
+                        <span id="date">6/17/2023</span>
+                    </div>
                 </div>
             </div>
         </div>
