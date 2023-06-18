@@ -15,6 +15,7 @@
         <div class="desktop">
             <div class="window" id="browser">
                 <header class="header" id="browser-header">
+                    <span>Browser</span>
                     <div class="tools">
                         <span class="close" id="browser-close">
                             <i class="fa-solid fa-xmark"></i>
@@ -27,6 +28,7 @@
             </div>
             <div class="window" id="files">
                 <header class="header" id="files-header">
+                    <span>Files</span>
                     <div class="tools">
                         <span class="close" id="files-close">
                             <i class="fa-solid fa-xmark"></i>
@@ -39,20 +41,19 @@
             </div>
         </div>
         <div class="start">
-            <div class="right">
-                <ul>
-                    <li>A</li>
-                    <li>files</li>
-                    <li>browser</li>
-                </ul>
-            </div>
-            <div class="left">
+            <div class="pinned">
                 <input type="text" placeholder="search" style="width: 100%;">
-                <h3>A</h3>
                 <ul>
-                    <li>
+                    <h4>Pinned</h4>
+                    <li class="window-open-btn" id="files-open">
                         <img alt="file" src="media/files.svg" ><span>files</span>
                     </li>
+                </ul>
+            </div>
+            <div class="recommended">
+                <ul>
+                    <li>files</li>
+                    <li>browser</li>
                 </ul>
             </div>
         </div>
@@ -62,16 +63,26 @@
                     <img alt="cirlce" src="media/windows-logo.svg" >
                 </div>
             </div>
-            <div class="apps">
+            <div class="apps container">
                 <ul>
                     <li title="files" class="window-open-btn" id="files-open"><img alt="files" src="media/files.svg" ></li>
                     <li title="browser" class="window-open-btn" id="browser-open"><img alt="browser" src="media/browser.png" ></li>
                 </ul>
             </div>
-            <div class="time">
+            <div class="tools container">
                 <div>
-                    <span>12:04 PM</span>
-                    <span>6/17/2023</span>
+                    <span>
+                        <i class="fa-solid fa-wifi"></i>
+                    </span>
+                    <span>
+                        <i class="fa-solid fa-volume-high"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="time container">
+                <div>
+                    <span id="time">12:04 PM</span>
+                    <span id="date">6/17/2023</span>
                 </div>
             </div>
         </div>

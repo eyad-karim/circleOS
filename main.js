@@ -123,3 +123,32 @@ function dragElement(elmnt) {
     document.onmousemove = null;
   }
 }
+
+let time = document.getElementById("time")
+
+function formatAMPM(date) {
+  var hours = date.getHours();
+  var minutes = date.getMinutes();
+  var ampm = hours >= 12 ? 'pm' : 'am';
+  hours = hours % 12;
+  hours = hours ? hours : 12; // the hour '0' should be '12'
+  minutes = minutes < 10 ? '0'+minutes : minutes;
+  var strTime = hours + ' : ' + minutes + ' ' + ampm.toLocaleUpperCase();
+  return strTime;
+}
+
+let d = new Date();
+
+time.innerText = formatAMPM(d);
+
+setInterval(() => {
+
+  let d = new Date();
+
+  time.innerText = formatAMPM(d);
+
+},1000)
+
+let date = document.getElementById("date");
+date.innerText = d.getDate() + "/" + ( d.getMonth() + 1 ) + "/" + d.getFullYear()
+console.log(d.getMonth());

@@ -5,7 +5,7 @@
 }
 
 input {
-    background-color: #eee;
+    background-color: #fff;
     border-radius: 10px;
     border: 1px solid #ddd;
     padding: 10px;
@@ -18,6 +18,10 @@ body {
 }
 main {
     height: 100vh;
+    background-image: url("media/bg.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 .taskbar {
     position: absolute;
@@ -34,7 +38,6 @@ main {
     z-index: 300;
 }
 .taskbar .start-btn {
-    background-color: #dfedee;
     border: 1px solid #ddd;
     height: 50px;
     width: 50px;
@@ -42,6 +45,8 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(10px);
 }
 .taskbar .start-btn div{
     display: flex;
@@ -60,19 +65,22 @@ main {
 .taskbar .start-btn div img{
     height: 25px;
     width: 25px;
-    transition-duration: 0.3s;
+    transition-duration: 0.2s;
 }
-.taskbar .apps {
-    background-color: #dfedee;
+.taskbar .container {
     padding: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    min-width: 300px;
     height: 50px;
     border-radius: 10px;
     border: 1px solid #ddd;
+    background-color: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(10px);
+}
+.taskbar .apps{
+    min-width: 300px;
 }
 .taskbar .apps ul{
     display: flex;
@@ -98,42 +106,53 @@ main {
 .taskbar .apps ul li img{
     height: 25px;
     width: 25px;
-    transition-duration: 0.3s;
-}
-.taskbar .time{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 5px;
-    background-color: #dfedee;
-    height: 50px;
-    border-radius: 10px;
-    border: 1px solid #ddd;
+    transition-duration: 0.2s;
 }
 .taskbar .time div{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
     font-size: 12px;
     padding: 5px;
+    transition-duration: 0.3s;
+    border-radius: 10px;
+    user-select: none;
+    height: 40px;
+    gap: 10px;
+}
+.taskbar .time div:hover{
+    background-color: #fff;
+}
+.taskbar .tools span{
+    transition-duration: 0.3s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    width: 40px;
+    height: 40px;
+}
+.taskbar .tools span:hover{
+    background-color: #fff;
 }
 .start{
     position: absolute;
     bottom: -200%;
     left: 50%;
     transform: translate(-50%,0);
-    width: 800px;
+    width: 600px;
     height: 700px;
-    background-color: #dfedee;
     margin-bottom: 60px;
     border-radius: 10px;
     border: 1px solid #ddd;
     display: flex;
-    flex-direction: row;
-    padding: 5px;
+    flex-direction: column;
     gap: 5px;
     transition-duration: 0.5s;
     transition-timing-function: cubic-bezier(.4, .01, .15, 1.1);
     z-index: 200;
+    background-color: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(10px);
 }
 
 .open-start {
@@ -141,38 +160,52 @@ main {
     transition-duration: 0.5s;
 }
 
-.start .right{
-    background-color: #fff;
+.start .recommended{
+    padding: 30px;
+    margin: 10px;
+    height: 16%;
     border-radius: 10px;
-    padding: 5px;
-    width: 200px;
+    background-color: rgba(255, 255, 255, 0.50);
+    display: flex;
+    align-items: center;
 }
 
-.start .right ul{
+.start .recommended ul{
     list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex: 1;
+    gap: 10px;
 }
-.start .right ul li{
-    padding: 5px;
+.start .recommended ul li{
+    padding: 10px;
     border-radius: 10px;
     border: 1px solid transparent;
-    margin-bottom: 5px;
     transition-duration: 0.3s;
+    display: inline;
+    width: calc(50% - 5px);
 }
-.start .right ul li:hover{
-    background-color: #eee;
+.start .recommended ul li:hover{
+    background-color: #fff;
     border: 1px solid #ddd;
 }
-.start .left{
-    background-color: #fff;
-    width: 600px;
-    padding: 5px;
+.start .pinned{
+    padding: 30px;
+    margin: 10px;
+    height: 84%;
     border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.50);
 }
-.start .left ul{
+.start .pinned ul{
     list-style: none;
-    margin: 5px;
+    margin: 20px;
 }
-.start .left ul li {
+.start .pinned ul h4{
+    margin: 15px 0;
+}
+.start .pinned ul li {
     width: 80px;
     height: 80px;
     display: flex;
@@ -184,13 +217,13 @@ main {
     border: 1px solid transparent;
     transition-duration: 0.3s;
 }
-.start .left ul li:hover{
-    background-color: #eee;
+.start .pinned ul li:hover{
+    background-color: #fff;
     border: 1px solid #ddd;
 }
-.start .left ul li img{
-    width: 50px;
-    height: 50px;
+.start .pinned ul li img{
+    width: 40px;
+    height: 40px;
 }
 
 [title]{
@@ -229,7 +262,8 @@ main {
 .window {
     display: none;
     position: absolute;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(10px);
     border: 1px solid #dfedee;
     padding: 40px 10px 10px 10px;
     border-radius: 10px;
@@ -240,6 +274,7 @@ main {
     overflow: hidden;
     z-index: 50;
     resize: both;
+    box-shadow: 0 0 15px rgba(45, 45, 45, 0.25);
 }
 
 .window.open-window{
@@ -260,11 +295,12 @@ main {
     top: 0;
     left: 0;
     right: 0;
+    padding-left: 10px;
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
     align-items: center;
     height: 40px;
-    background-color: transparent;
+    background-color: rgba(255, 255, 255, 0.75);
     z-index: 20;
     user-select: none;
 }
@@ -273,8 +309,6 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #dfedee;
-    border-radius: 0 0 0 10px;
     overflow: hidden;
 }
 
