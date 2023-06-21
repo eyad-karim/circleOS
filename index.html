@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="styles/windows.css">
     <link rel="stylesheet" href="styles/taskbar.css">
     <link rel="stylesheet" href="styles/tools-section.css">
+    <link rel="stylesheet" href="styles/settings.css">
     <!--  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,14 +18,33 @@
     <link rel="icon" href="media/windows-logo.svg">
 </head>
 <body>
-    <main>
+    <main id="main">
         <div class="desktop">
-            <div class="window" id="browser">
+            <div class="window draggable" id="browser">
                 <header class="header" id="browser-header">
                     <span>Browser</span>
                     <div class="tools">
                         <span class="close" id="browser-close">
                             <i class="fa-solid fa-xmark"></i>
+                        </span>
+                        <span class="window-maxmize-btn" id="browser-maxmize">
+                            <i class="fa-solid fa-expand"></i>
+                        </span>
+                    </div>
+                </header>
+                <div class="body">
+                    hi
+                </div>
+            </div>
+            <div class="window draggable" id="files">
+                <header class="header" id="files-header">
+                    <span>Files</span>
+                    <div class="tools">
+                        <span class="close" id="files-close">
+                            <i class="fa-solid fa-xmark"></i>
+                        </span>
+                        <span class="window-maxmize-btn" id="files-maxmize">
+                            <i class="fa-solid fa-expand"></i>
                         </span>
                     </div>
                 </header>
@@ -32,17 +52,43 @@
                     hi
                 </div>
             </div>
-            <div class="window" id="files">
-                <header class="header" id="files-header">
-                    <span>Files</span>
+            <div class="window draggable" id="settings">
+                <header class="header" id="settings-header">
+                    <span>Settings</span>
                     <div class="tools">
-                        <span class="close" id="files-close">
+                        <span class="close" id="settings-close">
                             <i class="fa-solid fa-xmark"></i>
+                        </span>
+                        <span class="window-maxmize-btn" id="settings-maxmize">
+                            <i class="fa-solid fa-expand"></i>
                         </span>
                     </div>
                 </header>
-                <div>
-                    hi
+                <div class="body">
+                    <div class="change-bg">
+                        <div id="current-background">
+                        </div>
+                        <div class="bgs">
+                            <div class="bg" onclick="changeBG('bg.svg')">
+                                <img src="media/bg.svg" alt="darkpurple">
+                            </div>
+                            <div class="bg" onclick="changeBG('bg2.svg')">
+                                <img src="media/bg2.svg" alt="lightblue">
+                            </div>
+                            <div class="bg" onclick="changeBG('bg3.svg')">
+                                <img src="media/bg3.svg" alt="darkblue">
+                            </div>
+                            <div class="bg" onclick="changeBG('bg4.svg')">
+                                <img src="media/bg4.svg" alt="light">
+                            </div>
+                            <div class="bg" onclick="changeBG('bg5.svg')">
+                                <img src="media/bg5.svg" alt="darkred">
+                            </div>
+                            <div class="bg" onclick="changeBG('bg6.svg')">
+                                <img src="media/bg6.svg" alt="the sun">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -51,8 +97,14 @@
                 <input type="text" placeholder="search" style="width: 100%;">
                 <ul>
                     <h4>Pinned</h4>
-                    <li class="window-open-btn" id="files-open">
+                    <li class="window-open-btn" id="browser-open" title="browser">
+                        <img alt="browser" src="media/browser.svg" ><span>browser</span>
+                    </li>
+                    <li class="window-open-btn" id="files-open" title="files">
                         <img alt="file" src="media/files.svg" ><span>files</span>
+                    </li>
+                    <li class="window-open-btn" id="settings-open" title="settings">
+                        <img alt="settings" src="media/settings.svg" ><span>settings</span>
                     </li>
                 </ul>
             </div>
@@ -60,7 +112,7 @@
         <div class="tools-section">
             <ul>
                 <li>
-                    <i class="fa-solid fa-wifi"></i><span>FVP3</span>
+                    <i class="fa-solid fa-wifi"></i><span>Connected</span>
                 </li>
                 <li>
                     <i class="fa-solid fa-volume-high"></i> <input style="flex:1;padding: 0;" type="range" min="0" max="100">
@@ -76,7 +128,7 @@
             <div class="apps container">
                 <ul>
                     <li title="files" class="window-open-btn" id="files-open"><img alt="files" src="media/files.svg" ></li>
-                    <li title="browser" class="window-open-btn" id="browser-open"><img alt="browser" src="media/browser.png" ></li>
+                    <li title="browser" class="window-open-btn" id="browser-open"><img alt="browser" src="media/browser.svg" ></li>
                 </ul>
             </div>
             <div class="tools container">
@@ -96,12 +148,16 @@
                 </div>
             </div>
         </div>
+        <div id="select"></div>
     </main>
     <script src="scripts/main.js"></script>
+    <!-- <script src="scripts/select.js"></script> -->
     <script src="scripts/close_btns.js"></script>
     <script src="scripts/open_btns.js"></script>
+    <script src="scripts/maxmize_btns.js"></script>
     <script src="scripts/window.js"></script>
     <script src="scripts/start.js"></script>
+    <script src="scripts/settings.js"></script>
     <script src="scripts/tools-section.js"></script>
 </body>
 </html>

@@ -6,10 +6,13 @@ function topWindow(windowID) {
 }
 
 windows.forEach((window) => {
-  dragElement(window);
   window.addEventListener("mousedown", () => {
     topWindow(window.id);
   });
+});
+
+draggableWindows.forEach((window) => {
+  dragElement(window);
 });
 
 function dragElement(elmnt) {

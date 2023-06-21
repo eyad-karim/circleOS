@@ -14,5 +14,7 @@ windowsOpenBtns.forEach((windowOpenBtn) => {
     openWindow(btnID.slice(0, -5));
 
     topWindow(btnID.slice(0, -5));
+
+    start.classList.remove("open-start")
   });
 });

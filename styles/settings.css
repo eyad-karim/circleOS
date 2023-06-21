@@ -1,0 +1,48 @@
+.window#settings .change-bg{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.window#settings #current-background{
+    width: 400px;
+    height: 300px;
+    border-radius: 10px;
+    border: 3px solid #fff;
+    background-image: url('../media/bg.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.window#settings .bgs {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    background-color: rgba(255, 255, 255, 0.75);
+    padding: 10px;
+    border-radius: 15px;
+    max-width: 500px;
+}
+.window#settings .bgs .bg{
+    width: 150px;
+    height: 112px;
+    border-radius: 10px;
+    background-color: #fff;
+    border: 2px solid #ddd;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    overflow: hidden;
+}
+
+.window#settings .bgs .bg:hover{
+    border-color: #009dff;
+}
+
+.window#settings .bgs .bg img{
+    height: 100%;
+}
