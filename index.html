@@ -65,7 +65,8 @@
                     </div>
                 </header>
                 <div class="body">
-                    <div class="change-bg">
+                    <h2>Personalization</h2>
+                    <div class="change-bg settings-sec">
                         <div id="current-background">
                         </div>
                         <div class="bgs">
@@ -87,6 +88,17 @@
                             <div class="bg" onclick="changeBG('bg6.svg')">
                                 <img src="media/bg6.svg" alt="the sun">
                             </div>
+                        </div>
+                    </div>
+                    <h2>Taskbar style</h2>
+                    <div class="change-taskbar-style settings-sec">
+                        <div>
+                            <input onchange="taskbarStyle('modern')" type="radio" id="modern" name="taskbar-style">
+                            <label for="modern">Modern style</label>
+                        </div>
+                        <div>
+                            <input onchange="taskbarStyle('classic')" type="radio" id="classic" name="taskbar-style">
+                            <label for="classic">Classic style</label>
                         </div>
                     </div>
                 </div>
@@ -119,7 +131,7 @@
                 </li>
             </ul>
         </div>
-        <div class="taskbar">
+        <div class="taskbar modern-style">
             <div class="start-btn" title="start">
                 <div class="start-open-btn">
                     <img alt="cirlce" src="media/windows-logo.svg" >
@@ -152,6 +164,7 @@
     </main>
     <script src="scripts/main.js"></script>
     <!-- <script src="scripts/select.js"></script> -->
+    <script src="scripts/taskbar_style.js"></script>
     <script src="scripts/close_btns.js"></script>
     <script src="scripts/open_btns.js"></script>
     <script src="scripts/maxmize_btns.js"></script>

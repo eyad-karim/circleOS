@@ -1,27 +1,22 @@
 .taskbar {
     position: absolute;
     bottom: 0;
-    left: 0;
-    right: 0;
     height: 50px;
     display: flex;
     align-items: center;
     flex-direction: row;
     justify-content: center;
-    margin: 5px;
     z-index: 300;
-    gap: 10px;
+    transition-property: gap, margin;
+    transition-duration: 0.5s;
 }
 .taskbar .start-btn {
-    border: 1px solid #ddd;
     height: 50px;
     width: 50px;
     border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.75);
-    backdrop-filter: blur(10px);
 }
 
 .taskbar .start-btn div{
@@ -54,14 +49,6 @@
     justify-content: center;
     flex-direction: row;
     height: 50px;
-    border-radius: 10px;
-    border: 1px solid #ddd;
-    background-color: rgba(255, 255, 255, 0.75);
-    backdrop-filter: blur(10px);
-}
-
-.taskbar .apps{
-    min-width: 300px;
 }
 
 .taskbar .apps ul{
@@ -126,4 +113,41 @@
 
 .taskbar .tools div:hover{
     background-color: #fff;
+}
+/**************************/
+.taskbar.modern-style {
+    left: 50%;
+    transform: translate(-50%,0);
+    right: 0;
+    height: 50px;
+    margin: 5px;
+    gap: 10px;
+}
+.taskbar.modern-style .start-btn {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(10px);
+}
+
+.taskbar.modern-style .container {
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    background-color: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(10px);
+}
+
+.taskbar.modern-style .apps{
+    min-width: 300px;
+}
+
+/*********************************/
+
+.taskbar.classic-style {
+    left: 50%;
+    transform: translate(-50%,0);
+    border-radius: 10px 10px 0 0;
+    background-color: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(10px);
 }

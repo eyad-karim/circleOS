@@ -89,3 +89,15 @@ input[type=range]:active::-webkit-slider-runnable-track {
     position: absolute;
     border-radius: 5px;
 }
+
+select{
+    padding: 10px;
+    border-radius: 5px;
+    appearance: none;
+    outline: none;
+}
+
+select option{
+    line-height: 20px;
+    appearance: none;
+}

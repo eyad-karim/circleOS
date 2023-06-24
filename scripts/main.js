@@ -1,5 +1,6 @@
 let main = document.getElementById("main");
 let desktop = document.querySelector(".desktop");
+let taskbar = document.querySelector(".taskbar");
 let windows = document.querySelectorAll(".window");
 let openedWindows = document.querySelector(".open-window");
 let draggableWindows = document.querySelectorAll(".draggable");
