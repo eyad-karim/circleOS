@@ -11,7 +11,7 @@
     flex-direction: row;
     gap: 10px;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     flex-wrap: nowrap;
 }
 .window#settings #current-background{
@@ -28,11 +28,10 @@
 .window#settings .bgs {
     display: inline-flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     flex-wrap: wrap;
     gap: 10px;
-    padding: 10px;
     border-radius: 15px;
     max-width: 500px;
 }

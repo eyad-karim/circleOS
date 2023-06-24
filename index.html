@@ -88,6 +88,14 @@
                             <div class="bg" onclick="changeBG('bg6.svg')">
                                 <img src="media/bg6.svg" alt="the sun">
                             </div>
+                            <div class="bg" onclick="changeBG('bg7.svg')">
+                                <img src="media/bg7.svg" alt="the ball">
+                            </div>
+                            <div class="bg">
+                                <img src="" alt="uploaded" id="uploaded" style="display: none;">
+                                <input onchange="uploadBG()" class="file-input" type="file" id="custom-bg">
+                                <label class="file-label" for="custom-bg">upload file</label>
+                            </div>
                         </div>
                     </div>
                     <h2>Taskbar style</h2>
@@ -170,7 +178,7 @@
     <script src="scripts/maxmize_btns.js"></script>
     <script src="scripts/window.js"></script>
     <script src="scripts/start.js"></script>
-    <script src="scripts/settings.js"></script>
+    <script src="scripts/bg.js"></script>
     <script src="scripts/tools-section.js"></script>
 </body>
 </html>
