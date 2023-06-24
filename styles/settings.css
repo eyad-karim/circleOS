@@ -1,26 +1,43 @@
-.window#settings h2{
-    width: 80%;
-    margin: 10px auto;
+.window#settings .body {
+    display: flex;
+    flex-direction: row;
 }
-.window#settings .settings-sec{
-    width: 80%;
-    margin: 0 auto;
+.window#settings .body nav{
+    padding: 10px;
+}
+.window#settings .body nav ul{
+    list-style-type: none;
+}
+.window#settings .body nav ul li{
+    padding: 5px 10px;
+    transition-duration: 0.3s;
+    user-select: none;
+    border-radius: 5px;
+}
+.window#settings .body nav ul li:hover{
+    background-color: #fff;
+}
+
+.window#settings .body .container{
+    padding: 50px;
+    flex: 1;
 }
 .window#settings .change-bg{
+    margin: 20px 10px;
     display: flex;
     flex-direction: row;
     gap: 10px;
-    justify-content: center;
-    align-items: start;
-    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
 }
 .window#settings #current-background{
     display: inline;
-    width: 450px;
-    height: 250px;
+    width: 320px;
+    height: 200px;
     border-radius: 10px;
-    border: 3px solid #fff;
-    background-image: url('../media/bg.svg');
+    border: 3px solid #000;
+    background-image: url(../media/bg.svg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -28,26 +45,33 @@
 .window#settings .bgs {
     display: inline-flex;
     flex-direction: row;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
     gap: 10px;
     border-radius: 15px;
-    max-width: 500px;
+    max-width: 430px;
+    align-content: center;
 }
 .window#settings .bgs .bg{
-    width: 150px;
-    height: 112px;
-    border-radius: 10px;
+    width: 100px;
+    height: 75px;
+    border-radius: 5px;
     background-color: #fff;
-    border: 2px solid #ddd;
     cursor: pointer;
-    transition-duration: 0.3s;
+    transition-duration: 0.1s;
     overflow: hidden;
+    outline-width: 1px;
+    outline-style: solid;
+    outline-color: transparent;
+    outline-offset: 0;
 }
 
 .window#settings .bgs .bg:hover{
-    border-color: #009dff;
+    outline-width: 1px;
+    outline-style: solid;
+    outline-color: #0085ff;
+    outline-offset: 1px;
 }
 
 .window#settings .bgs .bg img{

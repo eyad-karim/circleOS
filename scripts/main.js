@@ -20,7 +20,6 @@ let time = document.getElementById("time")
 let select = document.getElementById("select")
 
 let customBgBtn = document.getElementById("custom-bg")
-let uploaded = document.getElementById("uploaded")
 
 function formatAMPM(date) {
   var hours = date.getHours();

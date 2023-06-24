@@ -3,7 +3,6 @@ function changeBG(bgName) {
     document.getElementById("current-background").style.backgroundImage = `url('./media/${bgName}')`;
 }
 function uploadBG() {
-    uploaded.src = URL.createObjectURL(customBgBtn.files[0])
-    main.style.backgroundImage = `url('${uploaded.src}')`;
-    document.getElementById("current-background").style.backgroundImage = `url('${uploaded.src}')`;
+    main.style.backgroundImage = `url('${URL.createObjectURL(customBgBtn.files[0])}')`;
+    document.getElementById("current-background").style.backgroundImage = `url('${URL.createObjectURL(customBgBtn.files[0])}')`;
 }
