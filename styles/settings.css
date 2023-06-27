@@ -21,6 +21,7 @@
 .window#settings .body .container{
     padding: 50px;
     flex: 1;
+    background-color: #fff;
 }
 .window#settings .change-bg{
     margin: 20px 10px;
@@ -78,9 +79,11 @@
     height: 100%;
 }
 
-.window#settings .change-taskbar-style{
+.window#settings .settings-section{
+    padding: 10px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    gap: 50px;
+    align-items: start;
+    gap: 10px;
 }

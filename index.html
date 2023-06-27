@@ -71,7 +71,7 @@
                         </ul>
                     </nav>
                     <div class="container">
-                        <h2>Personalization</h2>
+                        <h2 style="color: #0085ff;">Personalization</h2>
                         <div class="change-bg">
                             <div id="current-background">
                             </div>
@@ -103,15 +103,18 @@
                                 </div>
                             </div>
                         </div>
-                        <h2>Taskbar style</h2>
-                        <div class="change-taskbar-style">
+                        <h2 style="color: #0085ff;">Taskbar</h2>
+                        <div class="settings-section">
+                            <h4>Taskbar style</h4>
                             <div>
-                                <input onchange="taskbarStyle('modern')" type="radio" id="modern" name="taskbar-style" checked="checked">
-                                <label for="modern">Modern style</label>
-                            </div>
-                            <div>
-                                <input onchange="taskbarStyle('classic')" type="radio" id="classic" name="taskbar-style">
-                                <label for="classic">Classic style</label>
+                                <div>
+                                    <input onchange="taskbarStyle('bubbles')" type="radio" id="bubbles" name="taskbar-style" checked="checked">
+                                    <label for="bubbles">Bubbles style</label>
+                                </div>
+                                <div>
+                                    <input onchange="taskbarStyle('joined')" type="radio" id="joined" name="taskbar-style">
+                                    <label for="joined">Joined style</label>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -145,7 +148,7 @@
                 </li>
             </ul>
         </div>
-        <div class="taskbar modern-style">
+        <div class="taskbar bubbles-style">
             <div class="start-btn" title="start">
                 <div class="start-open-btn">
                     <img alt="cirlce" src="media/windows-logo.svg" >

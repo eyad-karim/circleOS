@@ -115,7 +115,7 @@
     background-color: #fff;
 }
 /**************************/
-.taskbar.modern-style {
+.taskbar.bubbles-style {
     left: 50%;
     transform: translate(-50%,0);
     right: 0;
@@ -123,14 +123,14 @@
     margin: 5px;
     gap: 10px;
 }
-.taskbar.modern-style .start-btn {
+.taskbar.bubbles-style .start-btn {
     border: 1px solid #ddd;
     border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.75);
     backdrop-filter: blur(10px);
 }
 
-.taskbar.modern-style .container {
+.taskbar.bubbles-style .container {
     padding: 5px;
     border-radius: 10px;
     border: 1px solid #ddd;
@@ -138,16 +138,21 @@
     backdrop-filter: blur(10px);
 }
 
-.taskbar.modern-style .apps{
+.taskbar.bubbles-style .apps{
     min-width: 300px;
 }
 
 /*********************************/
 
-.taskbar.classic-style {
+.taskbar.joined-style {
     left: 50%;
     transform: translate(-50%,0);
     border-radius: 10px 10px 0 0;
     background-color: rgba(255, 255, 255, 0.75);
     backdrop-filter: blur(10px);
+    overflow: hidden;
+}
+
+.taskbar.joined-style > div{
+    border-radius: 0;
 }

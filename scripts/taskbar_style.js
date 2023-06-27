@@ -1,9 +1,9 @@
 function taskbarStyle(style){
-    if (style == "modern") {
-        taskbar.classList.remove("classic-style")
-        taskbar.classList.add("modern-style")
-    }else if (style == "classic") {
-        taskbar.classList.add("classic-style")
-        taskbar.classList.remove("modern-style")
+    if (style == "bubbles") {
+        taskbar.classList.remove("joined-style")
+        taskbar.classList.add("bubbles-style")
+    }else if (style == "joined") {
+        taskbar.classList.add("joined-style")
+        taskbar.classList.remove("bubbles-style")
     }
 }
