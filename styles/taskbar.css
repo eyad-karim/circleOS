@@ -10,6 +10,28 @@
     transition-property: gap, margin;
     transition-duration: 0.5s;
 }
+
+.taskbar > div{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex: 1;
+}
+.taskbar .center {
+    justify-content: center;
+    order: 20;
+}
+
+.taskbar .left {
+    justify-content: flex-end;
+    order: 10;
+}
+
+.taskbar .right {
+    justify-content: flex-start;
+    order: 30;
+}
+
 .taskbar .start-btn {
     height: 50px;
     width: 50px;
@@ -29,6 +51,10 @@
 }
 
 .taskbar .start-btn div:hover{
+    background-color: #fff;
+}
+
+.taskbar .container div:hover{
     background-color: #fff;
 }
 
@@ -83,46 +109,43 @@
 }
 
 .taskbar .time div{
-    display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
     font-size: 12px;
-    padding: 8px;
-    transition-duration: 0.3s;
-    border-radius: 10px;
     user-select: none;
-    height: 40px;
     gap: 10px;
 }
 
-.taskbar .time div:hover{
-    background-color: #fff;
+.taskbar .tools div{
+    gap: 20px;
 }
 
-.taskbar .tools div{
+.taskbar .container div{
     transition-duration: 0.3s;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
     border-radius: 10px;
     padding: 8px;
     height: 40px;
 }
-
-.taskbar .tools div:hover{
-    background-color: #fff;
-}
-/**************************/
+/************ bubbles-style **************/
 .taskbar.bubbles-style {
-    left: 50%;
-    transform: translate(-50%,0);
+    right: 0;
+    left: 0;
     right: 0;
     height: 50px;
     margin: 5px;
     gap: 10px;
 }
+
+.taskbar.bubbles-style > div{
+    gap: 10px;
+}
+
+.taskbar.bubbles-style .center{
+    flex: none;
+}
+
 .taskbar.bubbles-style .start-btn {
     border: 1px solid #ddd;
     border-radius: 10px;
@@ -142,7 +165,7 @@
     min-width: 300px;
 }
 
-/*********************************/
+/*************** joined-style ******************/
 
 .taskbar.joined-style {
     left: 50%;
@@ -153,6 +176,45 @@
     overflow: hidden;
 }
 
-.taskbar.joined-style > div{
+.taskbar.joined-style > div {
+    flex: none;
+}
+
+.taskbar.joined-style .left{
+    order: 25;
+}
+
+.taskbar.joined-style > div > div{
     border-radius: 0;
+}
+
+/************* boxs-style ***************/
+.taskbar.boxs-style{
+    right: 0;
+    left: 0;
+    margin: 5px;
+    gap: 10px;
+}
+
+.taskbar.boxs-style > div:not(.center) {
+    gap: 10px;
+}
+
+.taskbar.boxs-style .center {
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(10px);
+    border: 1px solid #ddd;
+}
+
+.taskbar.boxs-style .apps {
+    padding: 5px 0;
+}
+
+.taskbar.boxs-style .tools,.taskbar.boxs-style .time,.taskbar.boxs-style .weather {
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    background-color: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(10px);
 }

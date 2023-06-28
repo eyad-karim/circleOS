@@ -1,7 +1,9 @@
 let main = document.getElementById("main");
 let desktop = document.querySelector(".desktop");
 let taskbar = document.querySelector(".taskbar");
-let taskbarSections = document.querySelectorAll(".taskbar.modern-style > div");
+let taskbarRightSection = document.querySelector(".taskbar > div.right");
+let taskbarLeftSection = document.querySelector(".taskbar > div.left");
+
 let windows = document.querySelectorAll(".window");
 let openedWindows = document.querySelector(".open-window");
 let draggableWindows = document.querySelectorAll(".draggable");
@@ -29,11 +31,11 @@ let customBgBtn = document.getElementById("custom-bg");
 function formatAMPM(date) {
   var hours = date.getHours();
   var minutes = date.getMinutes();
-  var ampm = hours >= 12 ? "pm" : "am";
+  var ampm = hours >= 12 ? " pm" : " am";
   hours = hours % 12;
   hours = hours ? hours : 12;
   minutes = minutes < 10 ? "0" + minutes : minutes;
-  var strTime = hours + ":" + minutes + " " + ampm.toLocaleUpperCase();
+  var strTime = hours + ":" + minutes + ampm.toLocaleUpperCase();
   return strTime;
 }
 
@@ -47,17 +49,9 @@ setInterval(() => {
   time.innerText = formatAMPM(d);
 }, 1000);
 
+
+
+
 let date = document.getElementById("date");
 date.innerText = d.getDate() + "/" + (d.getMonth() + 1) + "/" + d.getFullYear();
 console.log(d.getMonth());
-
-function hexToRgb(c) {
-  if (/^#([a-f0-9]{3}){1,2}$/.test(c)) {
-    if (c.length == 4) {
-      c = "#" + [c[1], c[1], c[2], c[2], c[3], c[3]].join("");
-    }
-    c = "0x" + c.substring(1);
-    return [(c >> 16) & 255, (c >> 8) & 255, c & 255].join(",");
-  }
-  return "";
-}

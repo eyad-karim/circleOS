@@ -1,3 +1,6 @@
+.window#settings {
+    overflow: hidden;
+}
 .window#settings .body {
     display: flex;
     flex-direction: row;
@@ -21,7 +24,8 @@
 .window#settings .body .container{
     padding: 50px;
     flex: 1;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.5);
+    overflow: auto;
 }
 .window#settings .change-bg{
     margin: 20px 10px;

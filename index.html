@@ -115,12 +115,52 @@
                                     <input onchange="taskbarStyle('joined')" type="radio" id="joined" name="taskbar-style">
                                     <label for="joined">Joined style</label>
                                 </div>
+                                <div>
+                                    <input onchange="taskbarStyle('boxs')" type="radio" id="boxs" name="taskbar-style">
+                                    <label for="boxs">Boxs style</label>
+                                </div>
+                            </div>
+
+
+                            <h4>Taskbar right section position</h4>
+                            <div>
+                                <div>
+                                    <input onchange="taskbarRightSectionPosition('left')" type="radio" id="right-section-to-left" name="taskbar-right-section-position" checked="checked">
+                                    <label for="right-section-to-left">Left</label>
+                                </div>
+                                <div>
+                                    <input onchange="taskbarRightSectionPosition('center')" type="radio" id="right-section-to-center" name="taskbar-right-section-position">
+                                    <label for="right-section-to-center">Center</label>
+                                </div>
+                                <div>
+                                    <input onchange="taskbarRightSectionPosition('right')" type="radio" id="right-section-to-right" name="taskbar-right-section-position">
+                                    <label for="right-section-to-right">Right</label>
+                                </div>
+                            </div>
+
+
+                            <h4>Taskbar left section position</h4>
+                            <div>
+                                <div>
+                                    <input onchange="taskbarLeftSectionPosition('left')" type="radio" id="left" name="taskbar-left-section-position" checked="checked">
+                                    <label for="left">Left</label>
+                                </div>
+                                <div>
+                                    <input onchange="taskbarLeftSectionPosition('center')" type="radio" id="center" name="taskbar-left-section-position">
+                                    <label for="center">Center</label>
+                                </div>
+                                <div>
+                                    <input onchange="taskbarLeftSectionPosition('right')" type="radio" id="right" name="taskbar-left-section-position">
+                                    <label for="right">Right</label>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+
         <div class="start">
             <div class="pinned">
                 <input type="text" placeholder="search" style="width: 100%;">
@@ -138,6 +178,9 @@
                 </ul>
             </div>
         </div>
+
+
+
         <div class="tools-section">
             <ul>
                 <li>
@@ -148,36 +191,54 @@
                 </li>
             </ul>
         </div>
+
+
+
         <div class="taskbar bubbles-style">
-            <div class="start-btn" title="start">
-                <div class="start-open-btn">
-                    <img alt="cirlce" src="media/windows-logo.svg" >
+            <div class="left">
+                <div class="weather container">
+                    <div>
+                        weather
+                    </div>
                 </div>
             </div>
-            <div class="apps container">
-                <ul>
-                    <li title="files" class="window-open-btn" id="files-open"><img alt="files" src="media/files.svg" ></li>
-                    <li title="browser" class="window-open-btn" id="browser-open"><img alt="browser" src="media/browser.svg" ></li>
-                </ul>
-            </div>
-            <div class="tools container">
-                <div>
-                    <span>
-                        <i class="fa-solid fa-wifi"></i>
-                    </span>
-                    <span>
-                        <i class="fa-solid fa-volume-high"></i>
-                    </span>
+            <div class="center">
+                <div class="start-btn" title="start">
+                    <div class="start-open-btn">
+                        <img alt="cirlce" src="media/windows-logo.svg" >
+                    </div>
+                </div>
+                <div class="apps container">
+                    <ul>
+                        <li title="files" class="window-open-btn" id="files-open"><img alt="files" src="media/files.svg" ></li>
+                        <li title="browser" class="window-open-btn" id="browser-open"><img alt="browser" src="media/browser.svg" ></li>
+                    </ul>
                 </div>
             </div>
-            <div class="time container">
-                <div>
-                    <span id="time">12:04 PM</span>
-                    <span id="date">6/17/2023</span>
+            <div class="right">
+                <div class="tools container">
+                    <div>
+                        <span>
+                            <i class="fa-solid fa-wifi"></i>
+                        </span>
+                        <span>
+                            <i class="fa-solid fa-volume-high"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="time container">
+                    <div>
+                        <span id="time"></span>
+                        <span id="date"></span>
+                    </div>
                 </div>
             </div>
         </div>
+
+
         <div id="select"></div>
+
+
     </main>
     <script src="scripts/main.js"></script>
     <!-- <script src="scripts/select.js"></script> -->
