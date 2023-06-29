@@ -1,0 +1,20 @@
+.widgets-section {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    bottom: 0;
+    margin: 10px 10px 60px 10px;
+    width: 600px;
+    border: 1px solid #ddd;
+    background-color: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    transition-duration: 0.5s;
+    transition-timing-function: cubic-bezier(.4, .01, .15, 1.1);
+    z-index: 100;
+}
+.open-widgets-section{
+    left: 0;
+    transition-duration: 0.5s;
+}

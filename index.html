@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="styles/taskbar.css">
     <link rel="stylesheet" href="styles/tools-section.css">
     <link rel="stylesheet" href="styles/settings.css">
+    <link rel="stylesheet" href="styles/widgets.css">
     <!--  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -119,11 +120,15 @@
                                     <input onchange="taskbarStyle('boxs')" type="radio" id="boxs" name="taskbar-style">
                                     <label for="boxs">Boxs style</label>
                                 </div>
+                                <div>
+                                    <input onchange="taskbarStyle('windows11')" type="radio" id="windows11" name="taskbar-style">
+                                    <label for="windows11">Windows 11 style</label>
+                                </div>
                             </div>
 
 
-                            <h4>Taskbar right section position</h4>
-                            <div>
+                            <h4 class="taskbar-sections-position">Taskbar right section position</h4>
+                            <div class="taskbar-sections-position">
                                 <div>
                                     <input onchange="taskbarRightSectionPosition('left')" type="radio" id="right-section-to-left" name="taskbar-right-section-position" checked="checked">
                                     <label for="right-section-to-left">Left</label>
@@ -139,10 +144,10 @@
                             </div>
 
 
-                            <h4>Taskbar left section position</h4>
-                            <div>
+                            <h4 class="taskbar-sections-position">Taskbar left section position</h4>
+                            <div class="taskbar-sections-position">
                                 <div>
-                                    <input onchange="taskbarLeftSectionPosition('left')" type="radio" id="left" name="taskbar-left-section-position" checked="checked">
+                                    <input onchange="taskbarLeftSectionPosition('left')" type="radio" id="left" name="taskbar-left-section-position">
                                     <label for="left">Left</label>
                                 </div>
                                 <div>
@@ -150,7 +155,7 @@
                                     <label for="center">Center</label>
                                 </div>
                                 <div>
-                                    <input onchange="taskbarLeftSectionPosition('right')" type="radio" id="right" name="taskbar-left-section-position">
+                                    <input onchange="taskbarLeftSectionPosition('right')" type="radio" id="right" name="taskbar-left-section-position" checked="checked">
                                     <label for="right">Right</label>
                                 </div>
                             </div>
@@ -193,18 +198,22 @@
         </div>
 
 
+        <div class="widgets-section">
+            widgets
+        </div>
+
 
         <div class="taskbar bubbles-style">
             <div class="left">
-                <div class="weather container">
-                    <div>
-                        weather
+                <div class="widgets container">
+                    <div title="widgets">
+                        25C
                     </div>
                 </div>
             </div>
             <div class="center">
-                <div class="start-btn" title="start">
-                    <div class="start-open-btn">
+                <div class="start-btn">
+                    <div class="start-open-btn" title="start">
                         <img alt="cirlce" src="media/windows-logo.svg" >
                     </div>
                 </div>
@@ -243,6 +252,7 @@
     <script src="scripts/main.js"></script>
     <!-- <script src="scripts/select.js"></script> -->
     <script src="scripts/taskbar_style.js"></script>
+    <script src="scripts/widgets.js"></script>
     <script src="scripts/close_btns.js"></script>
     <script src="scripts/open_btns.js"></script>
     <script src="scripts/maxmize_btns.js"></script>
