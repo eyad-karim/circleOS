@@ -59,8 +59,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 10px;
+    border-radius: 5px;
     transition-duration: 0.3s;
+    cursor: pointer;
 }
 
 .taskbar .start-btn div:hover{
@@ -108,8 +109,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 10px;
+    border-radius: 5px;
     transition-duration: 0.3s;
+    cursor: pointer;
 }
 
 .taskbar .apps ul li:hover{
@@ -126,6 +128,10 @@
     transition-duration: 0.2s;
 }
 
+.taskbar .time {
+    gap: 5px;
+}
+
 .taskbar .time div{
     flex-direction: column;
     font-size: 12px;
@@ -133,7 +139,7 @@
 }
 
 .taskbar .tools div{
-    gap: 20px;
+    gap: 10px;
 }
 
 .taskbar .container div{
@@ -141,9 +147,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 8px;
     height: 40px;
+    cursor: pointer;
+}
+.taskbar .show-desktop-btn{
+    height: 15px;
+    width: 2px;
+    border-radius: 1px;
+    background-color: #000;
 }
 /************ bubbles-style **************/
 .taskbar.bubbles-style {
@@ -165,14 +178,14 @@
 
 .taskbar.bubbles-style .start-btn {
     border: 1px solid #ddd;
-    border-radius: 10px;
+    border-radius: 5px;
     background-color: rgba(255, 255, 255, 0.75);
     backdrop-filter: blur(10px);
 }
 
 .taskbar.bubbles-style .container {
     padding: 5px;
-    border-radius: 10px;
+    border-radius: 5px;
     border: 1px solid #ddd;
     background-color: rgba(255, 255, 255, 0.75);
     backdrop-filter: blur(10px);
@@ -187,7 +200,7 @@
 .taskbar.joined-style {
     left: 50%;
     transform: translate(-50%,0);
-    border-radius: 10px 10px 0 0;
+    border-radius: 5px 5px 0 0;
     background-color: rgba(255, 255, 255, 0.75);
     backdrop-filter: blur(10px);
     overflow: hidden;
@@ -218,7 +231,7 @@
 }
 
 .taskbar.boxs-style .center {
-    border-radius: 10px;
+    border-radius: 5px;
     background-color: rgba(255, 255, 255, 0.75);
     backdrop-filter: blur(10px);
     border: 1px solid #ddd;
@@ -226,7 +239,7 @@
 
 .taskbar.boxs-style .left .container,.taskbar.boxs-style .right .container{
     padding: 5px;
-    border-radius: 10px;
+    border-radius: 5px;
     border: 1px solid #ddd;
     background-color: rgba(255, 255, 255, 0.75);
     backdrop-filter: blur(10px);

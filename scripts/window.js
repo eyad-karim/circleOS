@@ -55,3 +55,9 @@ function dragElement(elmnt) {
     document.onmousemove = null;
   }
 }
+
+showDesktopBtn.addEventListener("click",() => {
+  windows.forEach(element => {
+    element.classList.remove("open-window")
+  })
+})

@@ -53,7 +53,7 @@ body {
 }
 main {
     height: 100vh;
-    background-image: url("../media/bg2.svg");
+    background-image: url(../media/bg1.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -70,7 +70,7 @@ main {
     transform: translateY(calc(-100% - 1.5em));
     border: 1px solid #cecece;
     padding: 5px 10px;
-    border-radius: 10px;
+    border-radius: 5px;
     font-size: 0.9em;
     background-color: rgb(255, 255, 255);
     transition-duration: 0.5s;

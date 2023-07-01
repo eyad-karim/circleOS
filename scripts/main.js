@@ -3,6 +3,7 @@ let desktop = document.querySelector(".desktop");
 let taskbar = document.querySelector(".taskbar");
 let taskbarRightSection = document.querySelector(".taskbar:not(.windows11-style,.joined-style) > div.right");
 let taskbarLeftSection = document.querySelector(".taskbar:not(.windows11-style,.joined-style) > div.left");
+let showDesktopBtn = document.querySelector(".taskbar .show-desktop-section");
 
 let windows = document.querySelectorAll(".window");
 let openedWindows = document.querySelector(".open-window");

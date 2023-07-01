@@ -42,7 +42,7 @@
     height: 200px;
     border-radius: 10px;
     border: 3px solid #000;
-    background-image: url(../media/bg2.svg);
+    background-image: url(../media/bg1.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -60,7 +60,7 @@
 }
 .window#settings .bgs .bg{
     width: 100px;
-    height: 75px;
+    height: 70px;
     border-radius: 5px;
     background-color: #fff;
     cursor: pointer;
@@ -81,6 +81,8 @@
 
 .window#settings .bgs .bg img{
     height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 .window#settings .settings-section{
