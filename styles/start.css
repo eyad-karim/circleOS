@@ -6,16 +6,15 @@
     width: 600px;
     height: 700px;
     margin-bottom: 60px;
-    border-radius: 10px;
-    border: 1px solid #ddd;
+    border-radius: 5px;
+    border: 1px solid #ccc;
     display: flex;
     flex-direction: column;
     gap: 5px;
     transition-duration: 0.5s;
     transition-timing-function: cubic-bezier(.4, .01, .15, 1.1);
     z-index: 200;
-    background-color: rgba(255, 255, 255, 0.75);
-    backdrop-filter: blur(10px);
+    background-color: #eee;
 }
 
 .open-start {
@@ -43,10 +42,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 5px;
     border: 1px solid transparent;
     transition-duration: 0.3s;
+    cursor: pointer;
 }
 .start .pinned ul li:hover{
     background-color: #fff;

@@ -6,8 +6,8 @@
 
 input[type=text] {
     background-color: #fff;
-    border-radius: 10px;
-    border: 1px solid #ddd;
+    border-radius: 5px;
+    border: 1px solid #ccc;
     padding: 10px;
     outline: none;
 }
@@ -53,38 +53,10 @@ body {
 }
 main {
     height: 100vh;
-    background-image: url(../media/bg1.jpg);
+    background-image: url(../media/bgs/windows-light.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-}
-
-[title]{
-    position: relative;
-}
-
-[title]:hover::after {
-    content: attr(title);
-    color: black;
-    position: absolute;
-    transform: translateY(calc(-100% - 1.5em));
-    border: 1px solid #cecece;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 0.9em;
-    background-color: rgb(255, 255, 255);
-    transition-duration: 0.5s;
-    animation: fadeIn 0.5s;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(calc(-100% - 3em));
-    }
-    to {
-        opacity: 1;
-    }
 }
 
 
@@ -107,4 +79,5 @@ main {
     align-items: center;
     justify-content: center;
     background-color: #eee;
+    cursor: pointer;
 }

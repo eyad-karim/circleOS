@@ -6,9 +6,8 @@
 .window {
     display: none;
     position: absolute;
-    background-color: rgba(255, 255, 255, 0.75);
-    backdrop-filter: blur(10px);
-    border: 1px solid #dfedee;
+    background-color: #eee;
+    border: 1px solid #ccc;
     padding: 40px 10px 10px 10px;
     border-radius: 5px;
     min-width: 300px;
@@ -18,7 +17,7 @@
     overflow: hidden;
     z-index: 50;
     resize: both;
-    box-shadow: 0 0 15px rgba(45, 45, 45, 0.25);
+    /* box-shadow: 0 0 15px rgba(45, 45, 45, 0.25); */
 }
 
 .window.open-window{
@@ -49,7 +48,7 @@
     justify-content: space-between;
     align-items: center;
     height: 40px;
-    background-color: rgba(255, 255, 255, 0.75);
+    background-color: #e3e3e3;
     z-index: 20;
     user-select: none;
 }
@@ -77,7 +76,7 @@
     color: white;
 }
 .window > .header > .tools > span:hover {
-    background-color: #ddd;
+    background-color: #ccc;
     color: black;
 }
 
