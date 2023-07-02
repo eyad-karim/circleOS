@@ -3,13 +3,15 @@
     position: absolute;
     bottom: 0;
     height: 50px;
+    margin: 5px;
     display: flex;
     align-items: center;
     flex-direction: row;
     justify-content: center;
     z-index: 300;
-    transition-property: gap, margin, left, right;
+    /* transition-property: all; */
     transition-duration: 0.5s;
+    border: 1px solid transparent;
 }
 
 @keyframes taskbar-a {
@@ -26,6 +28,9 @@
     align-items: center;
     flex-direction: row;
     flex: 1;
+    transition-property: all;
+    transition-duration: 0.5s;
+    border: 1px solid transparent;
 }
 .taskbar > div.justify-center {
     justify-content: center;
@@ -168,13 +173,37 @@
     border-radius: 1px;
     background-color: #000;
 }
+
+.taskbar .widgets div img {
+    width: 30px;
+    height: 30px;
+    transition-duration: 0.3s;
+}
+
+.taskbar .widgets div{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+.taskbar .widgets div:hover{
+    background-color: #fff;
+}
+
+.taskbar .widgets div:active img{
+    transform: scale(75%);
+}
+
 /************ bubbles-style **************/
 .taskbar.bubbles-style {
     right: 0;
     left: 0;
     right: 0;
     height: 50px;
-    margin: 5px;
     gap: 10px;
 }
 
@@ -208,7 +237,7 @@
 .taskbar.joined-style {
     left: 50%;
     transform: translate(-50%,0);
-    margin: 5px;
+    border: 1px solid #ccc;
     border-radius: 5px;
     background-color: #eee;
     overflow: hidden;
@@ -230,7 +259,6 @@
 .taskbar.boxs-style{
     right: 0;
     left: 0;
-    margin: 5px;
     gap: 10px;
 }
 
@@ -251,26 +279,28 @@
     background-color: #eee;
 }
 
-/**************** windows11-style ****************/
-.taskbar.windows11-style {
+/**************** compact-style ****************/
+.taskbar.compact-style {
     left: 0;
     right: 0;
+    border-radius: 5px;
     background-color: #eee;
+    border: 1px solid #ccc;
     overflow: hidden;
 }
 
-.taskbar.windows11-style .center{
+.taskbar.compact-style .center{
     flex: none;
 }
 
-.taskbar.windows11-style .left{
+.taskbar.compact-style .left{
     justify-content: left;
 }
 
-.taskbar.windows11-style .right{
+.taskbar.compact-style .right{
     justify-content: right;
 }
 
-.taskbar.windows11-style > div > div{
+.taskbar.compact-style > div > div{
     border-radius: 0;
 }

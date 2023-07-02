@@ -4,7 +4,7 @@ function taskbarStyle(style){
     taskbar.classList.remove("joined-style")
     taskbar.classList.remove("boxs-style")
     taskbar.classList.remove("bubbles-style")
-    taskbar.classList.remove("windows11-style")
+    taskbar.classList.remove("compact-style")
 
     taskbar.classList.add(style + "-style")
     switch (style) {
@@ -29,7 +29,7 @@ function taskbarStyle(style){
             });
             break;
 
-        case "windows11":
+        case "compact":
             
             taskbarSectionsPosition.forEach(element => {
                 element.style.display = "none";
