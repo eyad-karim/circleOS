@@ -132,38 +132,18 @@
                                     <label for="compact">Compact style</label>
                                 </div>
                             </div>
+                        </div>
 
-
-                            <h4 class="taskbar-sections-position">Taskbar right section position</h4>
-                            <div class="taskbar-sections-position">
+                        <div class="settings-section">
+                            <h4>Taskbar position</h4>
+                            <div>
                                 <div>
-                                    <input onchange="taskbarRightSectionPosition('left')" type="radio" id="right-section-to-left" name="taskbar-right-section-position" checked="checked">
-                                    <label for="right-section-to-left">Left</label>
-                                </div>
-                                <div>
-                                    <input onchange="taskbarRightSectionPosition('center')" type="radio" id="right-section-to-center" name="taskbar-right-section-position">
-                                    <label for="right-section-to-center">Center</label>
-                                </div>
-                                <div>
-                                    <input onchange="taskbarRightSectionPosition('right')" type="radio" id="right-section-to-right" name="taskbar-right-section-position">
-                                    <label for="right-section-to-right">Right</label>
-                                </div>
-                            </div>
-
-
-                            <h4 class="taskbar-sections-position">Taskbar left section position</h4>
-                            <div class="taskbar-sections-position">
-                                <div>
-                                    <input onchange="taskbarLeftSectionPosition('left')" type="radio" id="left" name="taskbar-left-section-position">
+                                    <input onchange="taskbarPostion('left')" type="radio" id="left" name="taskbar-position">
                                     <label for="left">Left</label>
                                 </div>
                                 <div>
-                                    <input onchange="taskbarLeftSectionPosition('center')" type="radio" id="center" name="taskbar-left-section-position">
+                                    <input onchange="taskbarPostion('center')" type="radio" id="center" name="taskbar-position" checked="checked">
                                     <label for="center">Center</label>
-                                </div>
-                                <div>
-                                    <input onchange="taskbarLeftSectionPosition('right')" type="radio" id="right" name="taskbar-left-section-position" checked="checked">
-                                    <label for="right">Right</label>
                                 </div>
                             </div>
                         </div>
@@ -173,9 +153,9 @@
         </div>
 
 
-        <div class="start">
+        <div class="start center-style">
             <div class="pinned">
-                <input type="text" placeholder="search" style="width: 100%;">
+                <input disabled type="text" placeholder="search" style="width: 100%;">
                 <ul>
                     <h4>Pinned</h4>
                     <li class="window-open-btn" id="browser-open" title="browser">
@@ -206,22 +186,36 @@
 
 
         <div class="widgets-section">
-            widgets
+            <div>widgets</div>
+            <div>widgets</div>
+            <div>widgets</div>
+            <div>widgets</div>
+            <div>widgets</div>
+            <div>widgets</div>
+            <div>widgets</div>
+            <div>widgets</div>
+            <div>widgets</div>
+            <div>widgets</div>
+            <div>widgets</div>
+            <div>widgets</div>
+            <div>widgets</div>
+            <div>widgets</div>
         </div>
 
 
-        <div class="taskbar bubbles-style">
+        <div class="taskbar bubbles-style center-style">
             <div class="left">
-                <div class="widgets container">
-                    <div title="widgets">
-                        <img src="media/widgets.png" alt="widgets-logo">
-                    </div>
-                </div>
+                
             </div>
             <div class="center">
                 <div class="start-btn">
                     <div class="start-open-btn" title="start">
                         <img alt="cirlce" src="media/windows-logo.svg" >
+                    </div>
+                </div>
+                <div class="widgets container">
+                    <div title="widgets">
+                        <img src="media/widgets.png" alt="widgets-logo">
                     </div>
                 </div>
                 <div class="apps container">

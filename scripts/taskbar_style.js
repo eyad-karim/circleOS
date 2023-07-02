@@ -1,5 +1,3 @@
-
-
 function taskbarStyle(style){
     taskbar.classList.remove("joined-style")
     taskbar.classList.remove("boxs-style")
@@ -7,53 +5,14 @@ function taskbarStyle(style){
     taskbar.classList.remove("compact-style")
 
     taskbar.classList.add(style + "-style")
-    switch (style) {
-        case "bubbles":
-            
-            taskbarSectionsPosition.forEach(element => {
-                element.style.display = "block";
-            });
-            break;
-    
-        case "joined":
-            
-            taskbarSectionsPosition.forEach(element => {
-                element.style.display = "none";
-            });
-            break;
-
-        case "boxs":
-            
-            taskbarSectionsPosition.forEach(element => {
-                element.style.display = "block";
-            });
-            break;
-
-        case "compact":
-            
-            taskbarSectionsPosition.forEach(element => {
-                element.style.display = "none";
-            });
-            break;
-    
-        default:
-            break;
-    }
 }
 
+function taskbarPostion(postion){
+    taskbar.classList.remove("left-style")
+    taskbar.classList.remove("center-style")
+    start.classList.remove("left-style")
+    start.classList.remove("center-style")
 
-function taskbarRightSectionPosition(style) {
-    taskbarRightSection.classList.remove("justify-right")
-    taskbarRightSection.classList.remove("justify-left")
-    taskbarRightSection.classList.remove("justify-center")
-
-    taskbarRightSection.classList.add("justify-" + style)
-}
-
-function taskbarLeftSectionPosition(style) {
-    taskbarLeftSection.classList.remove("justify-right")
-    taskbarLeftSection.classList.remove("justify-left")
-    taskbarLeftSection.classList.remove("justify-center")
-
-    taskbarLeftSection.classList.add("justify-" + style)
+    taskbar.classList.add(postion + "-style")
+    start.classList.add(postion + "-style")
 }

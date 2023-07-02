@@ -1,8 +1,6 @@
 let main = document.getElementById("main");
 let desktop = document.querySelector(".desktop");
 let taskbar = document.querySelector(".taskbar");
-let taskbarRightSection = document.querySelector(".taskbar:not(.windows11-style,.joined-style) > div.right");
-let taskbarLeftSection = document.querySelector(".taskbar:not(.windows11-style,.joined-style) > div.left");
 let showDesktopBtn = document.querySelector(".taskbar .show-desktop-section");
 
 let windows = document.querySelectorAll(".window");
@@ -31,7 +29,6 @@ let time = document.getElementById("time");
 let select = document.getElementById("select");
 
 let customBgBtn = document.getElementById("custom-bg");
-let taskbarSectionsPosition = document.querySelectorAll(".taskbar-sections-position");
 
 function formatAMPM(date) {
   var hours = date.getHours();

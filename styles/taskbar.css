@@ -32,17 +32,6 @@
     transition-duration: 0.5s;
     border: 1px solid transparent;
 }
-.taskbar > div.justify-center {
-    justify-content: center;
-}
-
-.taskbar > div.justify-right {
-    justify-content: right;
-}
-
-.taskbar > div.justify-left {
-    justify-content: left;
-}
 
 .taskbar .center {
     justify-content: center;
@@ -57,6 +46,7 @@
 .taskbar .right {
     justify-content: left;
     order: 30;
+    padding-left: 10px;
 }
 
 .taskbar .start-btn {
@@ -204,7 +194,11 @@
     left: 0;
     right: 0;
     height: 50px;
-    gap: 10px;
+}
+
+.taskbar.bubbles-style.left-style .left{
+    flex: none;
+    border-width: 0;
 }
 
 .taskbar.bubbles-style > div{
@@ -243,6 +237,15 @@
     overflow: hidden;
 }
 
+.taskbar.joined-style.left-style .left{
+    border-width: 0;
+}
+
+.taskbar.joined-style.left-style{
+    left: 0;
+    transform: translate(0,0);
+}
+
 .taskbar.joined-style > div {
     flex: none;
 }
@@ -259,7 +262,15 @@
 .taskbar.boxs-style{
     right: 0;
     left: 0;
-    gap: 10px;
+}
+
+.taskbar.boxs-style.left-style .left{
+    flex: none;
+    border-width: 0;
+}
+
+.taskbar.boxs-style.left-style .center{
+    justify-content: left;
 }
 
 .taskbar.boxs-style > div:not(.center) {
@@ -287,6 +298,11 @@
     background-color: #eee;
     border: 1px solid #ccc;
     overflow: hidden;
+}
+
+.taskbar.compact-style.left-style .left{
+    flex: none;
+    border-width: 0;
 }
 
 .taskbar.compact-style .center{
