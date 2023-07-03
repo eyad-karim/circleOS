@@ -105,7 +105,7 @@
     align-items: center;
     flex-direction: row;
     list-style: none;
-    gap: 2px;
+    gap: 5px;
 }
 
 .taskbar .apps ul li{
@@ -267,6 +267,10 @@
 .taskbar.boxs-style.left-style .left{
     flex: none;
     border-width: 0;
+}
+
+.taskbar.boxs-style.left-style .right{
+    flex: 2;
 }
 
 .taskbar.boxs-style.left-style .center{

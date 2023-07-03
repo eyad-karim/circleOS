@@ -1,0 +1,40 @@
+.notepad-textarea {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    outline: none;
+    border: none;
+    background-color: #fff;
+    resize: none;
+    padding: 15px;
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.notepad-tools {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #f1f1f1;
+    padding: 0 20px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+.notepad-tools div{
+    width: max-content;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+.notepad-tools div input[type=range] {
+    background-color: transparent;
+    width: 150px;
+}

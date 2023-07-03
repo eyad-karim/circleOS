@@ -30,6 +30,11 @@ let select = document.getElementById("select");
 
 let customBgBtn = document.getElementById("custom-bg");
 
+let notepadTextsizeInput = document.getElementById("notepad-textsize-input");
+let notepadTextsizeValue = document.getElementById("notepad-textsize-value");
+let notepadTextcolor = document.getElementById("notepad-textcolor");
+let notepadTextarea = document.getElementById("notepad-textarea");
+
 function formatAMPM(date) {
   var hours = date.getHours();
   var minutes = date.getMinutes();
