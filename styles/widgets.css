@@ -3,11 +3,8 @@
     top: 0;
     left: -100%;
     bottom: 0;
-    margin: 5px 5px 60px 5px;
+    margin: 10px 10px 70px 10px;
     width: 600px;
-    border: 1px solid #ccc;
-    background-color: #eee;
-    border-radius: 5px;
     padding: 20px;
     transition-duration: 0.5s;
     transition-timing-function: cubic-bezier(.4, .01, .15, 1.1);
@@ -19,6 +16,11 @@
     align-content: start;
     gap: 10px;
     overflow: auto;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 .open-widgets-section{
     left: 0;
@@ -26,10 +28,15 @@
 }
 
 .widgets-section div{
-    background-color: #fff;
-    border-radius: 5px;
-    border: 1px solid #ddd;
     padding: 10px;
     width: 250px;
     height: 150px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

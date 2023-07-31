@@ -4,6 +4,6 @@ startOpenBtn.addEventListener("click",() => {
     widgetsSection.classList.remove("open-widgets-section")
 })
 
-desktop.addEventListener("click",() => {
+desktop.addEventListener("mousedown",() => {
     start.classList.remove("open-start")
 })

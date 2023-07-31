@@ -51,26 +51,6 @@
                     </div>
                 </header>
                 <div class="body">
-                    <div class="notepad-tools">
-                        <div>
-                            <i class="fa-solid fa-text-height"></i>
-                            <span>text size:</span>
-                            <input id="notepad-textsize-input" onchange="notepadTextSize()" type="range" max="3" min="0.5" step="0.5">
-                            <span id="notepad-textsize-value">rem</span>
-                        </div>
-                        <div>
-                            <i class="fa-solid fa-align-justify"></i>
-                            <span>text align:</span>
-                            <i onclick="notepadTextAlign('left')" class="fa-solid fa-align-left"></i>
-                            <i onclick="notepadTextAlign('center')" class="fa-solid fa-align-center"></i>
-                            <i onclick="notepadTextAlign('right')" class="fa-solid fa-align-right"></i>
-                        </div>
-                        <div>
-                            <i class="fa-solid fa-droplet"></i>
-                            <span>text color:</span>
-                            <input id="notepad-textcolor" onchange="notepadTextColor()" type="color">
-                        </div>
-                    </div>
                     <textarea id="notepad-textarea" class="notepad-textarea"></textarea>
                 </div>
             </div>
@@ -192,7 +172,7 @@
 
         <div class="start center-style">
             <div class="pinned">
-                <input disabled type="text" placeholder="search" style="width: 100%;">
+                <!-- <input disabled type="text" placeholder="search" style="width: 100%;"> -->
                 <ul>
                     <h4>Pinned</h4>
                     <li class="window-open-btn" id="browser-open" title="browser">
@@ -226,10 +206,6 @@
 
 
         <div class="widgets-section">
-            <div>widgets</div>
-            <div>widgets</div>
-            <div>widgets</div>
-            <div>widgets</div>
             <div>widgets</div>
             <div>widgets</div>
             <div>widgets</div>
@@ -305,6 +281,5 @@
     <script src="scripts/start.js"></script>
     <script src="scripts/bg.js"></script>
     <script src="scripts/tools-section.js"></script>
-    <script src="scripts/notepad.js"></script>
 </body>
 </html>

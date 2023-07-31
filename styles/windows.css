@@ -6,10 +6,7 @@
 .window {
     display: none;
     position: absolute;
-    background-color: #eee;
-    border: 1px solid #ccc;
     padding: 40px 10px 10px 10px;
-    border-radius: 5px;
     min-width: 300px;
     min-height: 300px;
     width: 1200px;
@@ -17,7 +14,10 @@
     overflow: hidden;
     z-index: 50;
     resize: both;
-    /* box-shadow: 0 0 15px rgba(45, 45, 45, 0.25); */
+    border: 1.5px solid rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    background-color: #f1f1f1;
 }
 
 .window.open-window{
@@ -36,6 +36,7 @@
 
 .window.top{
     z-index: 60;
+    border-color: rgba(0, 133, 255, 1);
 }
 
 .window > .header{
@@ -48,9 +49,10 @@
     justify-content: space-between;
     align-items: center;
     height: 40px;
-    background-color: #e3e3e3;
     z-index: 20;
     user-select: none;
+    background-color: #fff;
+    box-shadow: 0px 0 5px rgba(0, 0, 0, 0.1);
 }
 
 .window > .header > .tools {
@@ -59,11 +61,14 @@
     align-items: center;
     flex-direction: row-reverse;
     overflow: hidden;
+    gap: 5px;
+    margin-right: 5px;
 }
 
 .window > .header > .tools > span {
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -76,8 +81,8 @@
     color: white;
 }
 .window > .header > .tools > span:hover {
-    background-color: #ccc;
-    color: black;
+    background-color: #26be00;
+    color: white;
 }
 
 .window .body {

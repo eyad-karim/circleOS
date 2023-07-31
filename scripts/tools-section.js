@@ -4,6 +4,6 @@ toolsOpenBtn.addEventListener("click",() => {
     start.classList.remove("open-start")
 })
 
-desktop.addEventListener("click",() => {
+desktop.addEventListener("mousedown",() => {
     toolsSection.classList.remove("open-tools-section")
 })
