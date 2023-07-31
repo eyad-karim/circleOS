@@ -2,8 +2,8 @@
     position: absolute;
     bottom: -100%;
     right: 0;
-    width: 400px;
-    /* height: 400px; */
+    width: 350px;
+    height: 400px;
     margin: 60px 10px;
     display: flex;
     gap: 5px;
@@ -11,8 +11,8 @@
     transition-timing-function: cubic-bezier(.4, .01, .15, 1.1);
     z-index: 150;
     border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 15px;
-    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(5px);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
@@ -27,20 +27,47 @@
     list-style: none;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     gap: 10px;
-    justify-content: center;
-    align-items: stretch;
-    padding: 20px;
+    justify-content: start;
+    align-items: start;
+    padding: 10px;
 }
-.tools-section ul li {
-    padding: 20px;
+.tools-section ul > div{
+    width: 100%;
     display: flex;
     flex-direction: row;
-    gap: 20px;
     align-items: center;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.5);
+    justify-content: space-between;
+    gap: 10px;
+}
+.tools-section ul > div > div li {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
     backdrop-filter: blur(5px);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    transition-duration: 0.3s;
+}
+.tools-section ul > div > div li.turned-on{
+    background-color: #0085ff;
+    color: #fff;
+}
+.tools-section ul > div > div {
+    flex: 1;
+    gap: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}
+.tools-section ul > div > div span{
+    text-align: center;
+    font-size: 12px;
 }

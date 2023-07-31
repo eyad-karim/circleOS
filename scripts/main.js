@@ -21,6 +21,8 @@ let startOpenBtn = document.querySelector(".start-open-btn");
 
 let toolsOpenBtn = document.querySelector(".tools div");
 let toolsSection = document.querySelector(".tools-section");
+let _toolsSection = document.getElementById("tools-section");
+let clickableTools = document.querySelectorAll(".tools-section ul div div li.clickable");
 
 let widgetsOpenBtn = document.querySelector(".widgets.container");
 let widgetsSection = document.querySelector(".widgets-section");
