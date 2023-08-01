@@ -16,11 +16,10 @@
     align-content: start;
     gap: 10px;
     overflow: auto;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(5px);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 0px 30px rgba(0, 0, 0, 0.1);
 }
 .open-widgets-section{
     left: 0;
@@ -31,11 +30,9 @@
     padding: 10px;
     width: 250px;
     height: 150px;
-    border: 1px solid #ccc;
+    border: 1px solid #ddd;
     border-radius: 5px;
-    background-color: #fff;
-    backdrop-filter: blur(5px);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    background-color: #f1f1f1;
     display: flex;
     align-items: center;
     justify-content: center;

@@ -1,50 +1,55 @@
 .window#settings {
     overflow: hidden;
 }
+
 .window#settings .body {
     display: flex;
     flex-direction: row;
 }
+
 .window#settings .body nav{
     padding: 10px;
 }
+
 .window#settings .body nav ul{
     list-style-type: none;
 }
+
 .window#settings .body nav ul li{
     padding: 5px 10px;
     transition-duration: 0.3s;
     user-select: none;
     border-radius: 5px;
+    border: 1px solid transparent;
 }
+
 .window#settings .body nav ul li:hover{
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: #fff;
+    border-color: #ddd;
 }
 
 .window#settings .body .container{
     margin: 10px;
     padding: 50px;
     flex: 1;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid #ddd;
     border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(5px);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
     overflow: auto;
 }
 .window#settings .change-bg{
-    margin: 20px 10px;
+    margin: 20px 0;
     display: flex;
     flex-direction: row;
     gap: 10px;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
 }
 .window#settings #current-background{
     display: inline;
-    width: 320px;
-    height: 200px;
+    width: 640px;
+    height: 400px;
     border-radius: 10px;
     border: 3px solid #000;
     background-image: url(../media/bgs/windows-light.jpg);
@@ -60,8 +65,7 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 10px;
-    border-radius: 10px;
-    max-width: 430px;
+    border-radius: 5px;
     align-content: center;
 }
 .window#settings .bgs .bg{
@@ -72,17 +76,10 @@
     cursor: pointer;
     transition-duration: 0.1s;
     overflow: hidden;
-    outline-width: 1px;
-    outline-style: solid;
-    outline-color: transparent;
-    outline-offset: 0;
 }
 
 .window#settings .bgs .bg:hover{
-    outline-width: 1px;
-    outline-style: solid;
-    outline-color: #0085ff;
-    outline-offset: 1px;
+    opacity: 0.5;
 }
 
 .window#settings .bgs .bg img{
@@ -92,10 +89,14 @@
 }
 
 .window#settings .settings-section{
-    padding: 10px;
+    padding: 20px;
+    margin: 5px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: start;
     gap: 10px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    border: 1px solid #ddd;
 }

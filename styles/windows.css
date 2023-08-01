@@ -15,7 +15,7 @@
     z-index: 50;
     resize: both;
     border: 1.5px solid rgba(255, 255, 255, 0.5);
-    border-radius: 10px;
+    border-radius: 5px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     background-color: #f1f1f1;
 }
@@ -44,15 +44,18 @@
     top: 0;
     left: 0;
     right: 0;
-    padding-left: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 40px;
     z-index: 20;
     user-select: none;
-    background-color: #fff;
-    box-shadow: 0px 0 5px rgba(0, 0, 0, 0.1);
+    background-color: transparent;
+}
+
+.window > .header > span {
+    color: #0085ff;
+    padding: 0 10px;
 }
 
 .window > .header > .tools {
@@ -74,22 +77,24 @@
     align-items: center;
     transition-duration: 0.3s;
     cursor: pointer;
-}
-
-.window > .header > .tools > span.close:hover {
-    background-color: red;
-    color: white;
+    color: #0085ff;
+    border: 1px solid transparent;
 }
 .window > .header > .tools > span:hover {
-    background-color: #26be00;
-    color: white;
+    background-color: #f1f1f1;
+    border-color: #ddd;
+}
+.window > .header > .tools > span.close:hover {
+    color: red;
+}
+.window > .header > .tools > span.window-maxmize-btn:hover {
+    color: green;
 }
 
 .window .body {
-    margin-top: 40px;
     overflow: auto;
     position: absolute;
-    top: 0;
+    top: 40px;
     left: 0;
     right: 0;
     bottom: 0;

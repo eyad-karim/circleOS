@@ -53,7 +53,7 @@
 .taskbar .start-btn {
     height: 50px;
     width: 50px;
-    border-radius: 10px;
+    border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -71,12 +71,12 @@
 }
 
 .taskbar .start-btn div:hover{
-    background-color: #fff;
+    background-color: #f1f1f1;
     border-color: #ddd;
 }
 
 .taskbar .container div:hover{
-    background-color: #fff;
+    background-color: #f1f1f1;
     border-color: #ddd;
 }
 
@@ -117,13 +117,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 8px;
+    border-radius: 5px;
     transition-duration: 0.3s;
     border: 1px solid transparent;
 }
 
 .taskbar .apps ul li:hover{
-    background-color: #fff;
+    background-color: #f1f1f1;
     border-color: #ddd;
 }
 
@@ -157,7 +157,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 8px;
+    border-radius: 5px;
     padding: 8px;
     height: 40px;
 }
@@ -180,12 +180,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 8px;
+    border-radius: 5px;
     transition-duration: 0.3s;
     border: 1px solid transparent;
 }
 .taskbar .widgets div:hover{
-    background-color: #fff;
+    background-color: #f1f1f1;
     border-color: #ddd;
 }
 .taskbar .widgets div:active img{
@@ -214,20 +214,18 @@
 }
 
 .taskbar.bubbles-style .start-btn {
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid #ddd;
     border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(5px);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    box-shadow: 0 0px 15px rgba(0, 0, 0, 0.1);
 }
 
 .taskbar.bubbles-style .container {
     padding: 5px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid #ddd;
     border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(5px);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    box-shadow: 0 0px 15px rgba(0, 0, 0, 0.1);
 }
 
 .taskbar.bubbles-style .apps{
@@ -239,11 +237,10 @@
 .taskbar.joined-style {
     left: 50%;
     transform: translate(-50%,0);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid #ddd;
     border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(5px);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    box-shadow: 0 0px 15px rgba(0, 0, 0, 0.1);
     overflow: hidden;
 }
 
@@ -296,31 +293,28 @@
 }
 
 .taskbar.boxs-style .center {
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid #ddd;
     border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(5px);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    box-shadow: 0 0px 15px rgba(0, 0, 0, 0.1);
 }
 
 .taskbar.boxs-style .left .container,.taskbar.boxs-style .right .container{
     padding: 5px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid #ddd;
     border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(5px);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    box-shadow: 0 0px 15px rgba(0, 0, 0, 0.1);
 }
 
 /**************** compact-style ****************/
 .taskbar.compact-style {
     left: 0;
     right: 0;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid #ddd;
     border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(5px);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    box-shadow: 0 0px 15px rgba(0, 0, 0, 0.1);
     overflow: hidden;
 }
 
