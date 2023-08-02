@@ -7,27 +7,6 @@
     flex-direction: row;
 }
 
-.window#settings .body nav{
-    padding: 10px;
-}
-
-.window#settings .body nav ul{
-    list-style-type: none;
-}
-
-.window#settings .body nav ul li{
-    padding: 5px 10px;
-    transition-duration: 0.3s;
-    user-select: none;
-    border-radius: 5px;
-    border: 1px solid transparent;
-}
-
-.window#settings .body nav ul li:hover{
-    background-color: #fff;
-    border-color: #ddd;
-}
-
 .window#settings .body .container{
     margin: 10px;
     padding: 50px;
