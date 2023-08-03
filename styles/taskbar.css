@@ -146,9 +146,15 @@
     font-size: 12px;
     user-select: none;
 }
+.taskbar .time div:active{
+    opacity: 0.5;
+}
 
 .taskbar .tools div{
     gap: 10px;
+}
+.taskbar .tools div:active{
+    opacity: 0.5;
 }
 
 .taskbar .container div{
