@@ -4,6 +4,7 @@
 }
 
 .window {
+    border-radius: 5px;
     display: none;
     position: absolute;
     padding: 40px 10px 10px 10px;
@@ -14,10 +15,11 @@
     overflow: hidden;
     z-index: 50;
     resize: both;
-    border: 1.5px solid rgba(255, 255, 255, 0.5);
-    border-radius: 5px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    background-color: #f1f1f1;
+    outline: 2px solid rgba(255, 255, 255, 0.5);
+    background-image: url(../media/bgs/main.jpg);
+    background-size: cover;
+    left: 20%;
+    top: 10%;
 }
 
 .window.open-window{
@@ -26,17 +28,16 @@
 
 .window.maxmize-window {
     transition-duration: 0.3s;
-    width: 100% !important;
-    height: calc(100% - 60px) !important;
-    top: 0 !important;
-    left: 0 !important;
+    top: 10px !important;
+    left: 10px !important;
+    width: calc(100% - 20px) !important;
+    height: calc(100% - 80px) !important;
     resize: none;
-    border-radius: 0 !important;
 }
 
 .window.top{
     z-index: 60;
-    border-color: rgba(0, 133, 255, 1);
+    outline-color: rgba(0, 133, 255, 1);
 }
 
 .window > .header{
@@ -54,7 +55,7 @@
 }
 
 .window > .header > span {
-    color: #0085ff;
+    color: #fff;
     padding: 0 10px;
 }
 
@@ -62,30 +63,28 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row-reverse;
+    flex-direction: row;
     overflow: hidden;
     gap: 5px;
     margin-right: 5px;
 }
 
 .window > .header > .tools > span {
-    width: 35px;
-    height: 35px;
-    border-radius: 5px;
+    width: 30px;
+    height: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition-duration: 0.3s;
     cursor: pointer;
-    color: #0085ff;
-    border: 1px solid transparent;
+    color: #fff;
+    border-radius: 5px;
+    transition-duration: 0.3s;
 }
 .window > .header > .tools > span:hover {
-    background-color: #fff;
-    border-color: #ddd;
+    background-color: rgba(255, 255, 255);
 }
 .window > .header > .tools > span.close:hover {
-    color: red;
+    color: black;
 }
 .window > .header > .tools > span.window-maxmize-btn:hover {
     color: green;
@@ -98,9 +97,9 @@
     left: 0;
     right: 0;
     bottom: 0;
-    margin: 10px;
     padding: 10px;
-    background-color: #fff;
-    border: 1px solid #ddd;
+    margin: 0 10px 10px 10px;
     border-radius: 5px;
+    overflow: hidden;
+    background-color: transparent;
 }

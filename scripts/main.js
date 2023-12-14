@@ -17,7 +17,7 @@ let windowsFullScreenBtns = document.querySelectorAll(
 );
 
 let start = document.querySelector(".start");
-let startOpenBtn = document.querySelector(".start-open-btn");
+let startOpenBtn = document.querySelector(".start-btn");
 
 let toolsOpenBtn = document.querySelector(".tools div");
 let toolsSection = document.querySelector(".tools-section");
@@ -31,11 +31,21 @@ let time = document.getElementById("time");
 let select = document.getElementById("select");
 
 let customBgBtn = document.getElementById("custom-bg");
+let customPiBtn = document.getElementById("custom-pi");
+let bgPosition = document.querySelector(".position");
+let bgPositions = document.querySelectorAll(".position > div");
 
 let notepadTextsizeInput = document.getElementById("notepad-textsize-input");
 let notepadTextsizeValue = document.getElementById("notepad-textsize-value");
 let notepadTextcolor = document.getElementById("notepad-textcolor");
 let notepadTextarea = document.getElementById("notepad-textarea");
+
+let cmdBody = document.querySelector("#cmd .body");
+let cmdInput = document.getElementById("cmd-input");
+let cmdOutput = document.getElementById("cmd-output");
+
+let browserSearch = document.getElementById("browser-search");
+let browserIframe = document.getElementById("browser-iframe");
 
 function formatAMPM(date) {
   var hours = date.getHours();

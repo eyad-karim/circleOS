@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>windows 12</title>
+    <title>windows 12 lite</title>
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/start.css">
     <link rel="stylesheet" href="styles/windows.css">
     <link rel="stylesheet" href="styles/taskbar.css">
-    <link rel="stylesheet" href="styles/tools-section.css">
     <link rel="stylesheet" href="styles/settings.css">
     <link rel="stylesheet" href="styles/widgets.css">
     <link rel="stylesheet" href="styles/notepad.css">
+    <link rel="stylesheet" href="styles/cmd.css">
+    <link rel="stylesheet" href="styles/browser.css">
     <!--  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,12 +23,34 @@
 <body>
     <main id="main">
         <div class="desktop">
+            <div class="window draggable" id="cmd">
+                <header class="header" id="cmd-header">
+                    <span>Cmd</span>
+                    <div class="tools">
+                        <span class="close" id="cmd-close">
+                            <i class="fa-solid fa-window-minimize"></i>
+                        </span>
+                        <span class="window-maxmize-btn" id="cmd-maxmize">
+                            <i class="fa-solid fa-expand"></i>
+                        </span>
+                    </div>
+                </header>
+                <div class="body">
+                    <div class="cmd-output" id="cmd-output">
+                        <p style="margin-bottom: 20px;">write <code>cmd help</code> for help ;D</p>
+                    </div>
+                    <div class="cmd-input">
+                        <p><span style='color:#0085ff;'>c:\users\user1\apps\&gt;</span></p>
+                        <div><span>$&nbsp;</span><input type="text" id="cmd-input" spellcheck="false"/></div>
+                    </div>
+                </div>
+            </div>
             <div class="window draggable" id="browser">
                 <header class="header" id="browser-header">
                     <span>Browser</span>
                     <div class="tools">
                         <span class="close" id="browser-close">
-                            <i class="fa-solid fa-xmark"></i>
+                            <i class="fa-solid fa-window-minimize"></i>
                         </span>
                         <span class="window-maxmize-btn" id="browser-maxmize">
                             <i class="fa-solid fa-expand"></i>
@@ -35,7 +58,12 @@
                     </div>
                 </header>
                 <div class="body">
-                    hi
+                    <div class="browser-search">
+                        <input type="text" id="browser-search" placeholder="search.. ">
+                    </div>
+                    <div class="iframe">
+                        <iframe id="browser-iframe" src="https://www.google.com?igu=1" frameborder="0"></iframe>
+                    </div>
                 </div>
             </div>
             <div class="window draggable" id="notepad">
@@ -43,7 +71,7 @@
                     <span>Notepad</span>
                     <div class="tools">
                         <span class="close" id="notepad-close">
-                            <i class="fa-solid fa-xmark"></i>
+                            <i class="fa-solid fa-window-minimize"></i>
                         </span>
                         <span class="window-maxmize-btn" id="notepad-maxmize">
                             <i class="fa-solid fa-expand"></i>
@@ -54,28 +82,12 @@
                     <textarea id="notepad-textarea" class="notepad-textarea"></textarea>
                 </div>
             </div>
-            <div class="window draggable" id="files">
-                <header class="header" id="files-header">
-                    <span>Files</span>
-                    <div class="tools">
-                        <span class="close" id="files-close">
-                            <i class="fa-solid fa-xmark"></i>
-                        </span>
-                        <span class="window-maxmize-btn" id="files-maxmize">
-                            <i class="fa-solid fa-expand"></i>
-                        </span>
-                    </div>
-                </header>
-                <div class="body">
-                    hi
-                </div>
-            </div>
             <div class="window draggable" id="settings">
                 <header class="header" id="settings-header">
                     <span>Settings</span>
                     <div class="tools">
                         <span class="close" id="settings-close">
-                            <i class="fa-solid fa-xmark"></i>
+                            <i class="fa-solid fa-window-minimize"></i>
                         </span>
                         <span class="window-maxmize-btn" id="settings-maxmize">
                             <i class="fa-solid fa-expand"></i>
@@ -84,105 +96,35 @@
                 </header>
                 <div class="body">
                     <div class="container">
-                        <h2 style="color: #0085ff;">Personalization</h2>
+                        <h2 style="color: #0085ff;">Basckground</h2>
+                        <input onchange="uploadBG()" class="file-input" type="file" accept="image/*" id="custom-bg">
                         <div class="change-bg">
                             <div id="current-background">
                             </div>
-                            <div class="bgs">
-                                <div class="bg" onclick="changeBG('dark-flow.jpg')">
-                                    <img src="media/bgs/dark-flow.jpg" alt="dark-flow">
-                                </div>
-                                
-                                <div class="bg" onclick="changeBG('minimal-blue.jpg')">
-                                    <img src="media/bgs/minimal-blue.jpg" alt="minimal-blue">
-                                </div>
-
-                                <div class="bg" onclick="changeBG('light-flow.jpg')">
-                                    <img src="media/bgs/light-flow.jpg" alt="light-flow">
-                                </div>
-
-                                <div class="bg" onclick="changeBG('minimal-white.jpg')">
-                                    <img src="media/bgs/minimal-white.jpg" alt="minimal-white">
-                                </div>
-
-                                <div class="bg" onclick="changeBG('windows-light.jpg')">
-                                    <img src="media/bgs/windows-light.jpg" alt="windows-light">
-                                </div>
-
-                                <div class="bg" onclick="changeBG('windows-dark.jpg')">
-                                    <img src="media/bgs/windows-dark.jpg" alt="windows-dark">
-                                </div>
-
-                                <div class="bg" onclick="changeBG('red-flow.jpg')">
-                                    <img src="media/bgs/red-flow.jpg" alt="red-flow">
-                                </div>
-
-                                <div class="bg" onclick="changeBG('bubbles.jpg')">
-                                    <img src="media/bgs/bubbles.jpg" alt="bubbles">
-                                </div>
-
-                                <div class="bg" onclick="changeBG('flow-layers.png')">
-                                    <img src="media/bgs/flow-layers.png" alt="flow-layers">
-                                </div>
-
-                                <div class="bg" onclick="changeBG('layers.png')">
-                                    <img src="media/bgs/layers.png" alt="layers">
-                                </div>
-
-                                <div class="bg" onclick="changeBG('purple-flow.jpg')">
-                                    <img src="media/bgs/purple-flow.jpg" alt="purple-flow">
-                                </div>
-
-                                <div class="bg" onclick="changeBG('waves-light.png')">
-                                    <img src="media/bgs/waves-light.png" alt="waves-light">
-                                </div>
-
-                                <div class="bg" onclick="changeBG('waves-dark.png')">
-                                    <img src="media/bgs/waves-dark.png" alt="waves-dark">
-                                </div>
-                                
-
-                                <div class="bg">
-                                    <input onchange="uploadBG()" class="file-input" type="file" id="custom-bg">
-                                    <label class="file-label" for="custom-bg">upload file</label>
+                            <div>
+                                <label class="file-label" for="custom-bg">upload file</label>
+                                <div class="position">
+                                    <div id="left-top" style="background-position:left top;">left top</div>
+                                    <div id="center-top" style="background-position:center top;">center top</div>
+                                    <div id="right-top" style="background-position:right top;">right top</div>
+                                    <div id="left-center" style="background-position:left center;">left center</div>
+                                    <div id="center-center" style="background-position:center center;">center center</div>
+                                    <div id="right-center" style="background-position:right center;">right center</div>
+                                    <div id="left-bottom" style="background-position:left bottom;">left bottom</div>
+                                    <div id="center-bottom" style="background-position:center bottom;">center bottom</div>
+                                    <div id="right-bottom" style="background-position:right bottom;">right bottom</div>
                                 </div>
                             </div>
                         </div>
-                        <h2 style="color: #0085ff;">Taskbar</h2>
-                        <div class="settings-section">
-                            <h4>Taskbar style</h4>
-                            <div>
-                                <div>
-                                    <input onchange="taskbarStyle('bubbles')" type="radio" id="bubbles" name="taskbar-style" checked="checked">
-                                    <label for="bubbles">Bubbles style</label>
-                                </div>
-                                <div>
-                                    <input onchange="taskbarStyle('joined')" type="radio" id="joined" name="taskbar-style">
-                                    <label for="joined">Joined style</label>
-                                </div>
-                                <div>
-                                    <input onchange="taskbarStyle('boxs')" type="radio" id="boxs" name="taskbar-style">
-                                    <label for="boxs">Boxs style</label>
-                                </div>
-                                <div>
-                                    <input onchange="taskbarStyle('compact')" type="radio" id="compact" name="taskbar-style">
-                                    <label for="compact">Compact style</label>
-                                </div>
+                    </div>
+                    <div class="container">
+                        <h2 style="color: #0085ff;">Profile Image</h2>
+                        <input onchange="uploadPI()" class="file-input" type="file" accept="image/*" id="custom-pi">
+                        <div class="change-bg">
+                            <div id="current-profile">
+                                <span>Eyad Karim</span>
                             </div>
-                        </div>
-
-                        <div class="settings-section">
-                            <h4>Taskbar position</h4>
-                            <div>
-                                <div>
-                                    <input onchange="taskbarPostion('left')" type="radio" id="left" name="taskbar-position">
-                                    <label for="left">Left</label>
-                                </div>
-                                <div>
-                                    <input onchange="taskbarPostion('center')" type="radio" id="center" name="taskbar-position" checked="checked">
-                                    <label for="center">Center</label>
-                                </div>
-                            </div>
+                            <label class="file-label" for="custom-pi">upload file</label>
                         </div>
                     </div>
                 </div>
@@ -193,13 +135,10 @@
         <div class="start center-style">
             <div class="pinned">
                 <!-- <input disabled type="text" placeholder="search" style="width: 100%;"> -->
+                <h4>Pinned</h4>
                 <ul>
-                    <h4>Pinned</h4>
                     <li class="window-open-btn" id="browser-open" title="browser">
                         <img alt="browser" src="media/browser.svg" ><span>browser</span>
-                    </li>
-                    <li class="window-open-btn" id="files-open" title="files">
-                        <img alt="file" src="media/files.png" ><span>files</span>
                     </li>
                     <li class="window-open-btn" id="notepad-open" title="notepad">
                         <img alt="notepad" src="media/notepad.png" ><span>notepad</span>
@@ -209,95 +148,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="recommended">
-                <h4>Recommended</h4>
-                <ul>
-                    <li>
-                        <i class="fa-solid fa-file"></i>
-                        <span>information.txt</span>
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-file-image"></i>
-                        <span>moon.png</span>
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-file-video"></i>
-                        <span>trip.mp4</span>
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-file-audio"></i>
-                        <span>lug lug cat.mp3</span>
-                    </li>
-                </ul>
-            </div>
-            <div class="start-tools">
-                <div class="user">
-                    <i class="fa-solid fa-circle-user"></i>
-                    <span>Jone Doe</span>
-                </div>
-                <div class="shortcuts">
-                    <i class="fa-solid fa-power-off"></i>
-                    <i class="fa-solid fa-arrow-rotate-left"></i>
-                    <i class="fa-solid fa-moon"></i>
-                    <i class="fa-solid fa-gear"></i>
-                </div>
-            </div>
         </div>
-
-
-
-        <div id="tools-section" class="tools-section">
-            <ul>
-                <div>
-                    <div>
-                        <li class="clickable turned-on">
-                            <i class="fa-solid fa-wifi"></i>
-                        </li>
-                        <span>Wifi</span>
-                    </div>
-                    <div>
-                        <li class="clickable">
-                            <i class="fa-solid fa-moon"></i>
-                        </li>
-                        <span>Night light</span>
-                    </div>
-                    <div>
-                        <li class="clickable">
-                            <i class="fa-solid fa-plane"></i>
-                        </li>
-                        <span>Airplane Mode</span>
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        <li class="clickable">
-                            <i class="fa-brands fa-accessible-icon"></i>
-                        </li>
-                        <span>accessibility</span>
-                    </div>
-                    <div>
-                        <li class="clickable">
-                            <i class="fa-solid fa-share-from-square"></i>
-                        </li>
-                        <span>Nearby sharing</span>
-                    </div>
-                    <div>
-                        <li class="clickable">
-                            <i class="fa-solid fa-display"></i>
-                        </li>
-                        <span>Project</span>
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        <li style="flex-direction: row;gap: 5px;">
-                            <i class="fa-solid fa-volume-high"></i> <input style="flex:1;padding: 0;" type="range" min="0" max="100">
-                        </li>
-                    </div>
-                </div>
-            </ul>
-        </div>
-
 
         <div class="widgets-section">
             <div>widgets</div>
@@ -312,25 +163,19 @@
             <div>widgets</div>
         </div>
 
-
         <div class="taskbar bubbles-style center-style">
             <div class="left">
-                
-            </div>
-            <div class="center">
                 <div class="start-btn">
-                    <div class="start-open-btn" title="start">
-                        <img alt="cirlce" src="media/windows.svg" >
-                    </div>
+                    <span>Eyad Karim</span>
                 </div>
                 <div class="widgets container">
-                    <div title="widgets">
-                        <img src="media/widgets.png" alt="widgets-logo">
-                    </div>
+                    <img src="media/widgets.png" alt="widgets-logo">
                 </div>
+            </div>
+            <div class="center">
                 <div class="apps container">
                     <ul>
-                        <li title="files" class="window-open-btn" id="files-open"><img alt="files" src="media/files.png" ></li>
+                        <li title="cmd" class="window-open-btn" id="cmd-open"><img alt="cmd" src="media/cmd.png" ></li>
                         <li title="browser" class="window-open-btn" id="browser-open"><img alt="browser" src="media/browser.svg" ></li>
                         <li title="notepad" class="window-open-btn" id="notepad-open"><img alt="notepad" src="media/notepad.png" ></li>
                     </ul>
@@ -359,9 +204,7 @@
             </div>
         </div>
 
-
         <div id="select"></div>
-
 
     </main>
     <script src="scripts/main.js"></script>
@@ -374,6 +217,7 @@
     <script src="scripts/window.js"></script>
     <script src="scripts/start.js"></script>
     <script src="scripts/bg.js"></script>
-    <script src="scripts/tools-section.js"></script>
+    <script src="scripts/browser.js"></script>
+    <script src="scripts/cmd.js"></script>
 </body>
 </html>

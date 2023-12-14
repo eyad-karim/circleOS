@@ -1,0 +1,33 @@
+#cmd .body{
+    padding-bottom: 300px;
+    scroll-behavior: smooth;
+    word-break: break-all;
+    color: #fff;
+    overflow-y: auto;
+}
+.cmd-input{
+    font-size: 20px;
+    font-family: monospace;
+}
+.cmd-input p{
+    margin: 2px;
+}
+.cmd-input div{
+    display: flex;
+}
+#cmd-input{
+    color: #fff;
+    flex: 1;
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+    font-size: 20px;
+    font-family: monospace;
+}
+.cmd-output{
+    overflow-x: hidden;
+    font-family: monospace;
+    font-size: 20px;
+    scroll-behavior: smooth;
+    word-break: break-all;
+}
